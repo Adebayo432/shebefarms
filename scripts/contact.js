@@ -27,7 +27,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Contact Form Handling
+// Contact Form Handling with WhatsApp Integration
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
 
@@ -35,44 +35,48 @@ contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     // Get form values
-    const formData = {
-        firstName: document.getElementById('firstName').value,
-        lastName: document.getElementById('lastName').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        subject: document.getElementById('subject').value,
-        message: document.getElementById('message').value,
-        newsletter: document.getElementById('newsletter').checked
-    };
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
 
-    // Show loading state
-    const btnText = document.querySelector('.btn-text');
-    const btnLoader = document.querySelector('.btn-loader');
-    btnText.style.display = 'none';
-    btnLoader.style.display = 'inline';
+    // Create WhatsApp message
+    const whatsappMessage = `
+*New Contact Form Submission from SHEBE FARMS Website*
 
-    // Simulate form submission (replace with actual API call)
+*Name:* ${firstName} ${lastName}
+*Email:* ${email}
+*Phone:* ${phone}
+*Subject:* ${subject}
+
+*Message:*
+${message}
+    `.trim();
+
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+
+    // WhatsApp number (remove + and spaces)
+    const whatsappNumber = '2348135308144';
+
+    // Create WhatsApp URL
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp in new tab
+    window.open(whatsappURL, '_blank');
+
+    // Show success message
+    formMessage.style.display = 'block';
+    formMessage.className = 'form-message success';
+    formMessage.textContent = 'Redirecting to WhatsApp... Please send the message there!';
+
+    // Reset form after a delay
     setTimeout(() => {
-        // Reset button state
-        btnText.style.display = 'inline';
-        btnLoader.style.display = 'none';
-
-        // Show success message
-        formMessage.style.display = 'block';
-        formMessage.className = 'form-message success';
-        formMessage.textContent = 'Thank you for contacting us! We will get back to you within 24 hours.';
-
-        // Reset form
         contactForm.reset();
-
-        // Hide message after 5 seconds
-        setTimeout(() => {
-            formMessage.style.display = 'none';
-        }, 5000);
-
-        // Log form data (for testing - remove in production)
-        console.log('Form submitted:', formData);
-    }, 2000);
+        formMessage.style.display = 'none';
+    }, 3000);
 });
 
 // FAQ Accordion

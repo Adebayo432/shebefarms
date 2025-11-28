@@ -61,6 +61,12 @@ body {
     animation: slideInLeft 0.8s ease;
 }
 
+.logo-container a {
+    text-decoration: none;
+
+
+}
+
 .logo {
     height: 50px;
     width: auto;
@@ -345,7 +351,7 @@ body {
 .trust-item {
     text-align: center;
     padding: 2rem;
-    background: var(--cherry-red);
+    background: linear-gradient(135deg, var(--dark-green) 30%, var(--cherry-red) 100%);
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -394,7 +400,7 @@ body {
 }
 
 .trust-item p {
-    color: var(--text-dark);
+    color: var(--light-green);
 }
 
 /* About Preview Section */

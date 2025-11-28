@@ -61,6 +61,10 @@ body {
     animation: slideInLeft 0.8s ease;
 }
 
+.logo-container a {
+    text-decoration: none;
+}
+
 .logo {
     height: 50px;
     width: auto;
@@ -255,8 +259,21 @@ body {
 
 .info-card h3 {
     font-size: 1.4rem;
-    color: var(--cherry-red);
+    color: var(--dark-green);
     margin-bottom: 1rem;
+}
+
+.info-card i {
+    color: var(--cherry-red);
+}
+
+.info-card a {
+    text-decoration: none;
+    color: var(--cherry-red);
+}
+
+.info-card a:hover {
+    text-decoration: underline;
 }
 
 .info-card p {
@@ -524,6 +541,56 @@ body {
     border: 2px solid #f5c6cb;
 }
 
+/* Social Section */
+.social-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.social-section h2 {
+    font-size: 2.5rem;
+    color: var(--cherry-red);
+    margin-bottom: 1rem;
+}
+
+.social-section p {
+    color: var(--dark-green);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    background: linear-gradient(135deg, var(--medium-green), var(--cherry-red));
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.social-btn:hover {
+    background: var(--light-green);
+    border-color: var(--dark-green);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(30, 64, 175, 0.4);
+}
+
 /* Map Section */
 .map-section {
     padding: 5rem 0;
@@ -557,6 +624,7 @@ body {
     height: 450px;
     background: linear-gradient(135deg, var(--light-green) 0%, var(--medium-green) 100%);
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: center;
 }

@@ -61,6 +61,10 @@ body {
     animation: slideInLeft 0.8s ease;
 }
 
+.logo-container a {
+    text-decoration: none;
+}
+
 .logo {
     height: 50px;
     width: auto;
@@ -315,6 +319,72 @@ body {
 
 .service-block.reverse .service-image {
     animation: slideInLeft 1s ease;
+}
+
+/* Service Content */
+.service-content {
+    animation: slideInLeft 1s ease;
+    position: relative;
+}
+
+.coming-soon-badge {
+    display: inline-block;
+    background: var(--cherry-red);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(196, 30, 58, 0.7);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(196, 30, 58, 0);
+    }
+}
+
+.btn-coming-soon {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-coming-soon:hover {
+    transform: none;
+    background: var(--cherry-red);
+}
+
+/* Additional Services Coming Soon Badge */
+.additional-card {
+    background: var(--light-green);
+    padding: 2.5rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.8s ease;
+    border: 3px solid transparent;
+    position: relative;
+}
+
+.coming-soon-mini {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--cherry-red);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
 }
 
 .image-placeholder {
