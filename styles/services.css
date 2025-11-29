@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -22,12 +25,28 @@ body {
     overflow-x: hidden;
 }
 
+/* Typography Updates */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.section-label,
+.btn,
+.nav-menu li a,
+.logo-text {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
 
 /* Navigation */
 .navbar {
@@ -59,7 +78,6 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-    animation: slideInLeft 0.8s ease;
 }
 
 .logo-container a {
@@ -118,14 +136,11 @@ body {
     width: 80%;
 }
 
-
-
 .menu-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 2px;
-
 }
 
 .menu-toggle span {
@@ -138,14 +153,13 @@ body {
 
 /* Page Hero */
 .page-hero {
-    height: 100vh;
+    height: 50vh;
     background: linear-gradient(135deg, var(--dark-green) 30%, var(--cherry-red) 100%);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 100px;
-
+    margin-top: 60px;
     overflow: hidden;
 }
 
@@ -194,6 +208,7 @@ body {
 .hero-content p {
     font-size: 1.5rem;
     color: var(--text-light);
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 /* Services Introduction */
@@ -307,11 +322,12 @@ body {
 }
 
 .service-features li::before {
-    content: '✓';
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
     position: absolute;
     left: 0;
     color: var(--cherry-red);
-    font-weight: bold;
     font-size: 1.3rem;
 }
 
@@ -431,16 +447,6 @@ body {
     gap: 2.5rem;
 }
 
-.additional-card {
-    background: var(--light-green);
-    padding: 2.5rem;
-    border-radius: 15px;
-    text-align: center;
-    transition: all 0.3s ease;
-    animation: fadeInUp 0.8s ease;
-    border: 3px solid transparent;
-}
-
 .additional-card:hover {
     transform: translateY(-10px);
     background: white;
@@ -452,6 +458,7 @@ body {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     animation: bounce 2s ease-in-out infinite;
+    color: var(--cherry-red);
 }
 
 .additional-card:nth-child(2) .additional-icon {
@@ -552,6 +559,7 @@ body {
     font-size: 3rem;
     margin: 1.5rem 0 1rem;
     animation: float 3s ease-in-out infinite;
+    color: var(--cherry-red);
 }
 
 .process-step:nth-child(odd) .step-icon {
@@ -589,21 +597,6 @@ body {
     font-size: 2rem;
     color: var(--cherry-red);
     font-weight: bold;
-    animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        opacity: 0.5;
-        transform: scale(1);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scale(1.2);
-    }
 }
 
 /* Pricing Section */
@@ -655,6 +648,7 @@ body {
 .feature-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: var(--cherry-red);
 }
 
 .pricing-feature h4 {
@@ -765,7 +759,6 @@ body {
     flex-wrap: wrap;
 }
 
-
 /* Footer */
 .footer {
     background: linear-gradient(135deg, var(--dark-green) 30%, var(--cherry-red) 100%);
@@ -865,12 +858,12 @@ body {
     }
 }
 
-/* Responsive Design */
+/* Responsive Design - FIXED FOR MOBILE */
 @media (max-width: 968px) {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 0px;
+        top: 68px;
         flex-direction: column;
         background: linear-gradient(135deg, var(--dark-green) 30%, var(--cherry-red) 100%);
         width: 40%;

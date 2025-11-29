@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -20,6 +23,25 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     overflow-x: hidden;
+}
+
+/* Typography Updates */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.section-label,
+.btn,
+.nav-menu li a,
+.logo-text,
+.trust-item h3,
+.hero-subtitle {
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 .container {
@@ -58,13 +80,10 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-    animation: slideInLeft 0.8s ease;
 }
 
 .logo-container a {
     text-decoration: none;
-
-
 }
 
 .logo {
@@ -119,14 +138,11 @@ body {
     width: 80%;
 }
 
-
-
 .menu-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 2px;
-
 }
 
 .menu-toggle span {
@@ -139,7 +155,7 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: 70vh;
     background: linear-gradient(135deg, var(--dark-green) 30%, var(--cherry-red) 100%);
     position: relative;
     display: flex;
@@ -367,6 +383,7 @@ body {
     font-size: 3rem;
     margin-bottom: 1rem;
     animation: float 3s ease-in-out infinite;
+    color: var(--light-green);
 }
 
 .trust-item:nth-child(2) .trust-icon {
@@ -479,11 +496,12 @@ body {
 }
 
 .feature-list li::before {
-    content: '✓';
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
     position: absolute;
     left: 0;
     color: var(--cherry-red);
-    font-weight: bold;
     font-size: 1.3rem;
 }
 

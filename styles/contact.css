@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -20,6 +23,23 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     overflow-x: hidden;
+}
+
+/* Typography Updates */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.section-label,
+.btn,
+.nav-menu li a,
+.logo-text {
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 .container {
@@ -58,7 +78,6 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-    animation: slideInLeft 0.8s ease;
 }
 
 .logo-container a {
@@ -117,14 +136,11 @@ body {
     width: 80%;
 }
 
-
-
 .menu-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 2px;
-
 }
 
 .menu-toggle span {
@@ -137,7 +153,7 @@ body {
 
 /* Page Hero */
 .page-hero {
-    height: 100vh;
+    height: 50vh;
     background: linear-gradient(135deg, var(--dark-green) 30%, var(--cherry-red) 100%);
     position: relative;
     display: flex;
@@ -192,6 +208,7 @@ body {
 .hero-content p {
     font-size: 1.5rem;
     color: var(--text-light);
+    font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 /* Contact Info Cards */
@@ -231,6 +248,7 @@ body {
     font-size: 3rem;
     margin-bottom: 1rem;
     animation: float 3s ease-in-out infinite;
+    color: var(--cherry-red);
 }
 
 .info-card:nth-child(2) .card-icon {
@@ -348,11 +366,12 @@ body {
 }
 
 .why-contact ul li::before {
-    content: '✓';
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
     position: absolute;
     left: 0;
     color: var(--cherry-red);
-    font-weight: bold;
 }
 
 .contact-image {
@@ -422,14 +441,6 @@ body {
     box-shadow: 0 8px 20px rgba(196, 30, 58, 0.4);
 }
 
-/* Responsive for form buttons */
-@media (max-width: 480px) {
-    .form-buttons {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-}
-
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -472,24 +483,6 @@ body {
 .form-group textarea {
     resize: vertical;
     min-height: 150px;
-}
-
-.checkbox-group {
-    flex-direction: row;
-    align-items: center;
-    gap: 0.8rem;
-}
-
-.checkbox-group input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-}
-
-.checkbox-group label {
-    margin: 0;
-    cursor: pointer;
-    font-weight: normal;
 }
 
 /* Buttons */
@@ -609,7 +602,7 @@ body {
 
 .social-btn {
     background: linear-gradient(135deg, var(--medium-green), var(--cherry-red));
-    color: var(--white);
+    color: var(--text-light);
     text-decoration: none;
     padding: 12px 30px;
     border-radius: 50px;
@@ -625,6 +618,7 @@ body {
 .social-btn:hover {
     background: var(--light-green);
     border-color: var(--dark-green);
+    color: var(--dark-green);
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 8px 25px rgba(30, 64, 175, 0.4);
 }
@@ -656,25 +650,6 @@ body {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.map-placeholder {
-    height: 450px;
-    background: linear-gradient(135deg, var(--light-green) 0%, var(--medium-green) 100%);
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-.map-content {
-    text-align: center;
-    color: var(--dark-green);
-}
-
-.map-content p {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
 }
 
 /* FAQ Section */
@@ -968,5 +943,10 @@ body {
 
     .cards-grid {
         grid-template-columns: 1fr;
+    }
+
+    .form-buttons {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }

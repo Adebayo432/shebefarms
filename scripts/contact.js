@@ -116,7 +116,7 @@ ${formData.message}
     const emailSubject = `Contact Form: ${formData.subject} - ${formData.firstName} ${formData.lastName}`;
 
     // Encode for mailto
-    const mailtoLink = `mailto:info@shebefarms.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:contact@shebefarms.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
 
     // Open email client
     window.location.href = mailtoLink;
