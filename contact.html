@@ -7,7 +7,7 @@
     <title>Contact Us - SHEBE FARMS</title>
     <link rel="stylesheet" href="styles/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="images/favicon.jpg" type="image/x-icon" />
+    <link rel="icon" href="images/shebe logo.png" type="image/x-icon" />
 </head>
 
 <body>
@@ -15,9 +15,9 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="logo-container">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="SHEBE FARMS Logo" class="logo"></a>
-                <a href="index.html"> <span class="logo-text">SHEBE FARMS</span></a>
+                <a href="index.html" class="active">
+                    <img src="images/shebe logo.png" alt="SHEBE FARMS Logo" class="logo"> <span class="logo-text">SHEBE
+                        FARMS</span></a>
             </div>
 
             <div class="menu-toggle" id="menuToggle">
@@ -30,7 +30,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
-                <!-- <li><a href="contact.html" class="active">Contact</a></li> -->
+                <li><a href="blog.html">Gallery</a></li>
             </ul>
         </div>
     </nav>
@@ -63,7 +63,7 @@
                 <div class="info-card">
                     <div class="card-icon"> <i class="fa-solid fa-envelope"></i></div>
                     <h3>Email Us</h3>
-                    <p> <a href="mailto:info@shebefarms.com">info@shebefarms.com</a> </p>
+                    <p> <a href="mailto:contact@shebefarms.com">contact@shebefarms.com</a> </p>
                 </div>
 
                 <div class="info-card">
@@ -153,10 +153,15 @@
                                 placeholder="Tell us more about your needs..."></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">
-                            <span class="btn-text"> <i class="fa-brands fa-whatsapp"></i> Send Message</span>
-                            <span class="btn-loader" style="display: none;">Sending...</span>
-                        </button>
+                        <div class="form-buttons">
+                            <button type="submit" class="btn btn-primary btn-whatsapp">
+                                <span class="btn-text"><i class="fa-brands fa-whatsapp"></i> Send via WhatsApp</span>
+                            </button>
+
+                            <button type="button" class="btn btn-secondary btn-email" id="emailBtn">
+                                <span class="btn-text"><i class="fa-solid fa-envelope"></i> Send via Email</span>
+                            </button>
+                        </div>
 
                         <div class="form-message" id="formMessage" style="display: none;"></div>
                     </form>
@@ -308,7 +313,7 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="services.html">Services</a></li>
-                        <!-- <li><a href="contact.html">Contact</a></li> -->
+                        <li><a href="blog.html">Gallery</a></li>
                     </ul>
                 </div>
 
@@ -318,6 +323,7 @@
                         <li><a href="#" target="_blank"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
                         <li><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
                         <li><a href="#" target="_blank"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+                        <li><a href="#" target="_blank"><i class="fa-brands fa-tiktok"></i> TikTok</a></li>
                     </ul>
                 </div>
 

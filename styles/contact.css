@@ -76,10 +76,10 @@ body {
 }
 
 .logo-text {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--text-light);
-    letter-spacing: 2px;
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--medium-green);
+    letter-spacing: 1px;
 }
 
 .nav-menu {
@@ -390,6 +390,44 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+}
+
+/* Form Buttons Container */
+.form-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: var(--text-light);
+}
+
+.btn-whatsapp:hover {
+    background: #128C7E;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+}
+
+#emailBtn {
+    background: var(--cherry-red);
+    color: var(--text-light);
+}
+
+#emailBtn:hover {
+    background: #A01828;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(196, 30, 58, 0.4);
+}
+
+/* Responsive for form buttons */
+@media (max-width: 480px) {
+    .form-buttons {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }
 
 .form-row {

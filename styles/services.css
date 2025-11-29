@@ -28,6 +28,7 @@ body {
     padding: 0 20px;
 }
 
+
 /* Navigation */
 .navbar {
     background: linear-gradient(135deg, var(--dark-green) 0%, var(--cherry-red) 100%);
@@ -76,10 +77,10 @@ body {
 }
 
 .logo-text {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--text-light);
-    letter-spacing: 2px;
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--medium-green);
+    letter-spacing: 1px;
 }
 
 .nav-menu {
@@ -143,7 +144,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 60px;
+    padding-top: 100px;
+
     overflow: hidden;
 }
 
@@ -868,7 +870,7 @@ body {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 68px;
+        top: 0px;
         flex-direction: column;
         background: linear-gradient(135deg, var(--dark-green) 30%, var(--cherry-red) 100%);
         width: 40%;

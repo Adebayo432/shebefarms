@@ -27,7 +27,19 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Contact Form Handling with WhatsApp Integration
+// Get form data function
+function getFormData() {
+    return {
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value
+    };
+}
+
+// Contact Form Handling - WhatsApp
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
 
@@ -35,24 +47,19 @@ contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
     // Get form values
-    const firstName = document.getElementById('firstName').value;
-    const lastName = document.getElementById('lastName').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
+    const formData = getFormData();
 
     // Create WhatsApp message
     const whatsappMessage = `
 *New Contact Form Submission from SHEBE FARMS Website*
 
-*Name:* ${firstName} ${lastName}
-*Email:* ${email}
-*Phone:* ${phone}
-*Subject:* ${subject}
+*Name:* ${formData.firstName} ${formData.lastName}
+*Email:* ${formData.email}
+*Phone:* ${formData.phone}
+*Subject:* ${formData.subject}
 
 *Message:*
-${message}
+${formData.message}
     `.trim();
 
     // Encode the message for URL
@@ -71,6 +78,53 @@ ${message}
     formMessage.style.display = 'block';
     formMessage.className = 'form-message success';
     formMessage.textContent = 'Redirecting to WhatsApp... Please send the message there!';
+
+    // Reset form after a delay
+    setTimeout(() => {
+        contactForm.reset();
+        formMessage.style.display = 'none';
+    }, 3000);
+});
+
+// Email Button Handler
+const emailBtn = document.getElementById('emailBtn');
+
+emailBtn.addEventListener('click', () => {
+    // Validate form first
+    if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        return;
+    }
+
+    // Get form values
+    const formData = getFormData();
+
+    // Create email body
+    const emailBody = `
+New Contact Form Submission from SHEBE FARMS Website
+
+Name: ${formData.firstName} ${formData.lastName}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Subject: ${formData.subject}
+
+Message:
+${formData.message}
+    `.trim();
+
+    // Create email subject
+    const emailSubject = `Contact Form: ${formData.subject} - ${formData.firstName} ${formData.lastName}`;
+
+    // Encode for mailto
+    const mailtoLink = `mailto:info@shebefarms.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+
+    // Open email client
+    window.location.href = mailtoLink;
+
+    // Show success message
+    formMessage.style.display = 'block';
+    formMessage.className = 'form-message success';
+    formMessage.textContent = 'Opening your email client... Please send the message!';
 
     // Reset form after a delay
     setTimeout(() => {
