@@ -866,7 +866,7 @@ h6 {
         text-align: center;
         margin-inline-start: 60%;
         border-top-left-radius: 50px;
-        transition: all 1s ease;
+        transition: all 0.5s ease;
         padding: 0.5rem 0;
         gap: 0;
     }

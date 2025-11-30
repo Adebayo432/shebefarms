@@ -107,7 +107,7 @@ h6 {
     display: flex;
     list-style: none;
     gap: 2rem;
-    animation: slideInRight 0.8s ease;
+    animation: slideInRight 0.3s ease-in-out;
 }
 
 .nav-menu li a {
@@ -732,7 +732,7 @@ h6 {
         text-align: center;
         margin-inline-start: 60%;
         border-top-left-radius: 50px;
-        transition: all 1s ease;
+        transition: all 0.5s ease-in-out;
         padding: 0.5rem 0;
         gap: 0;
     }
