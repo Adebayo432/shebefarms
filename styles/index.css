@@ -19,7 +19,7 @@
 }
 
 body {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    /* font-family: 'Georgia', 'Times New Roman', serif; */
     line-height: 1.6;
     color: var(--text-dark);
     overflow-x: hidden;
@@ -32,7 +32,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Amatic', 'SC';
 }
 
 .section-label,
@@ -40,7 +40,8 @@ h6 {
 .nav-menu li a,
 .logo-text,
 .trust-item h3,
-.hero-subtitle {
+.hero-subtitle,
+p {
     font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
