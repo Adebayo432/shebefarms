@@ -19,7 +19,7 @@
 }
 
 body {
-    font-family: 'Georgia', 'Times New Roman', serif;
+    /* font-family: 'Georgia', 'Times New Roman', serif; */
     line-height: 1.6;
     color: var(--text-dark);
     overflow-x: hidden;
@@ -32,7 +32,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Amatic', 'SC';
 }
 
 .section-label,
@@ -81,7 +81,7 @@ p {
     gap: 15px;
 }
 
-.logo-container A {
+.logo-container a {
     text-decoration: none;
 }
 
@@ -160,10 +160,9 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 100px;
+    margin-top: 60px;
     overflow: hidden;
 }
-
 
 .page-hero::before {
     content: '';
@@ -221,7 +220,7 @@ p {
 
 .intro-content {
     text-align: center;
-    max-width: 800px;
+    max-width: 100%;
     margin: 0 auto;
     animation: fadeInUp 0.8s ease;
 }
@@ -760,7 +759,6 @@ p {
     justify-content: center;
     flex-wrap: wrap;
 }
-
 
 /* Footer */
 .footer {
