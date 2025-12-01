@@ -1,0 +1,3 @@
+const EMAILJS_PUBLIC_KEY = "7Y7NVda7o5gleywRR";
+const EMAILJS_SERVICE_ID = "service_dxuegsd";
+const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";

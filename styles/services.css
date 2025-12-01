@@ -310,7 +310,8 @@ p {
     color: var(--cherry-red);
     opacity: 0.3;
     line-height: 1;
-    margin-bottom: 1rem;
+    margin-bottom: 1;
+
 }
 
 .service-content h3 {
@@ -326,6 +327,8 @@ p {
     margin-bottom: 2rem;
     line-height: 1.8;
 }
+
+
 
 .service-features {
     list-style: none;
@@ -400,6 +403,7 @@ p {
 .btn-coming-soon {
     opacity: 0.6;
     cursor: not-allowed;
+
 }
 
 .btn-coming-soon:hover {

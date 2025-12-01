@@ -740,6 +740,10 @@ p {
         gap: 0;
     }
 
+    .scroll-indicator {
+        display: none;
+    }
+
     .nav-menu.active {
         left: 0;
     }
@@ -794,6 +798,10 @@ p {
 @media (max-width: 480px) {
     .hero-title {
         font-size: 2rem;
+    }
+
+    .scroll-indicator {
+        display: none;
     }
 
     .hero-subtitle {
