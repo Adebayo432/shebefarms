@@ -1,5 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+</script>
+Microsoft Clarity (Free heatmaps):
+html
+<script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+        t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "YOUR_PROJECT_ID");
+</script>
 
 <head>
     <meta charset="UTF-8">
@@ -119,7 +135,7 @@
 
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" aria-label="Home SHEBE FARMS">Home</a></li>
-                <li><a href="about.html" aria-label="About SHEBE FARMS">Services</a></li>
+                <li><a href="about.html" aria-label="About SHEBE FARMS">About</a></li>
                 <li><a href="blog.html" aria-label="Photo Gallery">Gallery</a></li>
                 <li><a href="contact.html" aria-label="Contact Us">Contact</a></li>
             </ul>
@@ -175,6 +191,31 @@
                     <img src="images/crop-cultivation-image.jpg" alt="Commercial tomato cultivation at SHEBE FARMS"
                         class="image-placeholder" width="600" height="400" loading="lazy">
                 </div>
+
+                <div class="service-content">
+                    <span class="service-number">02</span> <br>
+                    <span class="coming-soon-badge">Coming Soon</span>
+                    <h2 id="tomato-heading">Drone Services & Aerial Solutions </h2>
+                    <p>Professional, tech-enabled drone operations offering precision, speed, and insight across
+                        agriculture, infrastructure, and logistics. Reliable data capture and delivery with end-to-end
+                        visibility and efficiency.
+                    </p>
+                    <ul class="service-features">
+                        <li>High-resolution aerial mapping & imaging</li>
+                        <li>Real-time crop health monitoring
+                        </li>
+                        <li>Infrastructure inspection & analysis</li>
+                        <li>On-demand delivery & logistics support</li>
+                        <li>Data analytics & reporting solutions</li>
+                        <li>Scalable deployment for bulk operations</li>
+                    </ul>
+                    <!-- <button class="btn btn-primary btn-coming-soon" disabled
+                        aria-label="Commercial tomato production service coming soon">Coming Soon</button> -->
+                </div>
+                <div class="service-image">
+                    <img src="images/Equipmentservices-image.jpg" alt="Smart farming equipment and technology"
+                        class="image-placeholder" width="600" height="400" loading="lazy">
+                </div>
             </article>
         </div>
     </section>
@@ -187,7 +228,7 @@
                         class="image-placeholder" width="600" height="400" loading="lazy">
                 </div>
                 <div class="service-content">
-                    <span class="service-number">02</span> <br>
+                    <span class="service-number">03</span> <br>
                     <span class="coming-soon-badge">Coming Soon</span>
                     <h2 id="tech-heading">Smart Farming Technology</h2>
                     <p>Access to cutting-edge agricultural technology and data analytics that optimize farming
@@ -211,7 +252,7 @@
         <div class="container">
             <article class="service-block">
                 <div class="service-content">
-                    <span class="service-number">03</span> <br>
+                    <span class="service-number">04</span> <br>
                     <span class="coming-soon-badge">Coming Soon</span>
                     <h2 id="consult-heading">Agricultural Consultation & Training</h2>
                     <p>Expert guidance and training programs designed to help farmers and agricultural businesses adopt
@@ -243,7 +284,7 @@
                         class="image-placeholder" width="600" height="400" loading="lazy">
                 </div>
                 <div class="service-content">
-                    <span class="service-number">04</span> <br>
+                    <span class="service-number">05</span> <br>
                     <span class="coming-soon-badge">Coming Soon</span>
                     <h2 id="supply-heading">Supply Chain & Distribution</h2>
                     <p>Reliable commercial supply of high-quality Crops with full traceability and transparency from
@@ -259,7 +300,9 @@
                     <!-- <button class="btn btn-primary btn-coming-soon" disabled
                         aria-label="Supply chain service coming soon">Coming Soon</button> -->
                 </div>
+
             </article>
+
         </div>
     </section>
 
