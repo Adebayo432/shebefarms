@@ -149,6 +149,8 @@ p {
     flex-direction: column;
     cursor: pointer;
     gap: 2px;
+    background-color: transparent;
+    border: none;
 }
 
 .menu-toggle span {
@@ -933,10 +935,10 @@ p {
         top: 68px;
         flex-direction: column;
         background: linear-gradient(135deg, var(--dark-green) 30%, var(--cherry-red) 100%);
-        width: 60%;
-        max-width: 300px;
+        width: 40%;
         border-bottom-left-radius: 50px;
         text-align: center;
+        margin-inline-start: 60%;
         border-top-left-radius: 50px;
         transition: all 0.5s ease;
         padding: 0.5rem 0;
@@ -944,7 +946,7 @@ p {
     }
 
     .nav-menu.active {
-        left: 40%;
+        left: 0;
     }
 
     .nav-menu li {

@@ -83,7 +83,7 @@ p {
     gap: 15px;
 }
 
-.logo-container a {
+.logo-container A {
     text-decoration: none;
 }
 
@@ -108,7 +108,7 @@ p {
     display: flex;
     list-style: none;
     gap: 2rem;
-    animation: slideInRight 0.3s ease-in-out;
+    animation: slideInRight 0.8s ease;
 }
 
 .nav-menu li a {
@@ -144,6 +144,8 @@ p {
     flex-direction: column;
     cursor: pointer;
     gap: 2px;
+    background-color: transparent;
+    border: none;
 }
 
 .menu-toggle span {
@@ -733,7 +735,7 @@ p {
         text-align: center;
         margin-inline-start: 60%;
         border-top-left-radius: 50px;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease;
         padding: 0.5rem 0;
         gap: 0;
     }
