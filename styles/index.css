@@ -9,10 +9,10 @@
 }
 
 :root {
-    --cherry-red: #C41E3A;
+    --cherry-red: #c94a4a;
     --light-green: #E8F5E9;
-    --dark-green: #1B5E20;
-    --medium-green: #2E7D32;
+    --dark-green: #27c2ee;
+    --medium-green: #096194;
     --cream: #FFF8E1;
     --text-dark: #2C2C2C;
     --text-light: #FFFFFF;
@@ -100,7 +100,7 @@ p {
 .logo-text {
     font-size: 1rem;
     font-weight: 900;
-    color: var(--medium-green);
+    color: rgb(38, 120, 38);
     letter-spacing: 1px;
 }
 
@@ -370,7 +370,7 @@ p {
 .trust-item {
     text-align: center;
     padding: 2rem;
-    background: linear-gradient(135deg, var(--dark-green) 30%, var(--cherry-red) 100%);
+    background: linear-gradient(135deg, var(--dark-green) 20%, var(--cherry-red) 100%);
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
