@@ -9,14 +9,15 @@
 }
 
 :root {
-    --cherry-red: #c94a4a;
+    --cherry-red: #C41E3A;
     --light-green: #E8F5E9;
-    --dark-green: #27c2ee;
-    --medium-green: #096194;
+    --dark-green: #1B5E20;
+    --medium-green: #2E7D32;
     --cream: #FFF8E1;
     --text-dark: #2C2C2C;
     --text-light: #FFFFFF;
 }
+
 
 body {
     /* font-family: 'Georgia', 'Times New Roman', serif; */
@@ -100,7 +101,7 @@ p {
 .logo-text {
     font-size: 1rem;
     font-weight: 900;
-    color: rgb(38, 120, 38);
+    color: var(--medium-green);
     letter-spacing: 1px;
 }
 
