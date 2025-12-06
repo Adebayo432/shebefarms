@@ -9,13 +9,13 @@
 }
 
 :root {
-    --cherry-red: #C41E3A;
-    --light-green: #E8F5E9;
-    --dark-green: #1B5E20;
-    --medium-green: #2E7D32;
-    --cream: #FFF8E1;
-    --text-dark: #2C2C2C;
-    --text-light: #FFFFFF;
+    --cherry-red: #2c4c3b;
+    --light-green: #c07f5e;
+    --dark-green: #e3c188;
+    --medium-green: #f4f0e6;
+    --cream: #534e38;
+    --text-dark: #728d83;
+    --text-light: rgb(28, 219, 28);
 }
 
 body {
@@ -32,7 +32,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Amatic', 'SC';
+    font-family: 'oswald';
 }
 
 .section-label,
@@ -40,7 +40,7 @@ h6 {
 .nav-menu li a,
 .logo-text,
 p {
-    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Helvetica';
 }
 
 .container {
@@ -51,7 +51,7 @@ p {
 
 /* Navigation */
 .navbar {
-    background: linear-gradient(135deg, var(--dark-green) 0%, var(--cherry-red) 100%);
+    background: linear-gradient(135deg, var(--text-dark) 20%, var(--cherry-red) 100%);
     padding: 1rem 0;
     position: fixed;
     width: 100%;
@@ -98,7 +98,7 @@ p {
 .logo-text {
     font-size: 1rem;
     font-weight: 900;
-    color: var(--medium-green);
+    color: var(--text-light);
     letter-spacing: 1px;
 }
 
@@ -110,7 +110,7 @@ p {
 }
 
 .nav-menu li a {
-    color: var(--text-light);
+    color: var(--medium-green);
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
@@ -140,6 +140,8 @@ p {
 .menu-toggle {
     display: none;
     flex-direction: column;
+    background-color: transparent;
+
     cursor: pointer;
     gap: 2px;
 }
@@ -155,7 +157,10 @@ p {
 /* Page Hero */
 .page-hero {
     height: 50vh;
-    background: linear-gradient(135deg, var(--dark-green) 30%, var(--cherry-red) 100%);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
     position: relative;
     display: flex;
     align-items: center;
@@ -171,7 +176,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,50 Q300,100 600,50 T1200,50 L1200,120 L0,120 Z" fill="%23E8F5E9" opacity="0.1"/></svg>') repeat-x bottom;
+
     animation: wave 20s linear infinite;
 }
 
@@ -188,28 +193,32 @@ p {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.hero-overlay-img {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
     text-align: center;
-    color: var(--text-light);
     animation: fadeInUp 1s ease;
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
-    color: var(--light-green);
+    color: var(--medium-green);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-bottom: 1rem;
 }
 
 .hero-content p {
     font-size: 1.5rem;
-    color: var(--text-light);
-    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: var(--medium-green);
+    font-family: 'Helvetica';
 }
 
 /* Our Story Section */
@@ -232,13 +241,11 @@ p {
 .image-placeholder {
     width: 100%;
     height: 450px;
-    background: linear-gradient(135deg, var(--light-green) 0%, var(--medium-green) 100%);
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
-    color: var(--dark-green);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
 }
@@ -263,7 +270,7 @@ p {
 
 .story-content h2 {
     font-size: 2.5rem;
-    color: var(--dark-green);
+    color: var(--text-light);
     margin-bottom: 1.5rem;
     line-height: 1.2;
 }
@@ -271,14 +278,14 @@ p {
 .story-content p {
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
-    color: var(--text-dark);
+    color: var(--cream);
     text-align: justify;
 }
 
 /* Mission & Vision Section */
 .mission-vision {
     padding: 5rem 0;
-    background: linear-gradient(180deg, var(--light-green) 0%, white 100%);
+    background: white;
 }
 
 .mv-grid {
@@ -288,7 +295,7 @@ p {
 }
 
 .mv-card {
-    background: white;
+    background: linear-gradient(135deg, var(--text-dark) 20%, var(--cherry-red) 100%);
     padding: 3rem;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -306,7 +313,7 @@ p {
     font-size: 4rem;
     margin-bottom: 1.5rem;
     animation: float 3s ease-in-out infinite;
-    color: var(--cherry-red);
+    color: var(--text-light);
 }
 
 .mission .mv-icon {
@@ -331,13 +338,13 @@ p {
 
 .mv-card h3 {
     font-size: 2rem;
-    color: var(--cherry-red);
+    color: var(--text-light);
     margin-bottom: 1.5rem;
 }
 
 .mv-card p {
     font-size: 1.1rem;
-    color: var(--text-dark);
+    color: var(--medium-green);
     line-height: 1.8;
 }
 
@@ -355,13 +362,13 @@ p {
 
 .section-header h2 {
     font-size: 2.5rem;
-    color: var(--dark-green);
+    color: var(--text-light);
     margin-bottom: 1rem;
 }
 
 .section-header p {
     font-size: 1.2rem;
-    color: var(--text-dark);
+    color: var(--cream);
 }
 
 .values-grid {
@@ -371,7 +378,7 @@ p {
 }
 
 .value-card {
-    background: var(--light-green);
+    background: linear-gradient(135deg, var(--text-dark) 20%, var(--cherry-red) 100%);
     padding: 2.5rem;
     border-radius: 15px;
     transition: all 0.3s ease;
@@ -380,17 +387,19 @@ p {
 }
 
 .value-card:hover {
+
     transform: translateY(-10px) scale(1.02);
     background: white;
-    border-color: var(--cherry-red);
+    background: rgb(14, 101, 40);
     box-shadow: 0 10px 30px rgba(196, 30, 58, 0.2);
 }
+
 
 .value-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
     animation: pulse 2s ease-in-out infinite;
-    color: var(--cherry-red);
+    color: var(--text-light);
 }
 
 .value-card:nth-child(2) .value-icon {
@@ -427,20 +436,22 @@ p {
 
 .value-card h4 {
     font-size: 1.5rem;
-    color: var(--cherry-red);
+    color: var(--text-light);
     margin-bottom: 1rem;
 }
 
 .value-card p {
     font-size: 1rem;
-    color: var(--text-dark);
+    color: var(--medium-green);
     line-height: 1.7;
 }
+
+
 
 /* Why Choose Us Section */
 .why-choose {
     padding: 5rem 0;
-    background: linear-gradient(180deg, var(--light-green) 0%, white 100%);
+    background: (white 100%);
 }
 
 .why-grid {
@@ -456,7 +467,7 @@ p {
 
 .why-content h2 {
     font-size: 2.5rem;
-    color: var(--dark-green);
+    color: var(--text-light);
     margin-bottom: 2rem;
 }
 
@@ -471,13 +482,15 @@ p {
     gap: 1.5rem;
     align-items: flex-start;
     padding: 1.5rem;
-    background: white;
+    background: linear-gradient(135deg, var(--text-dark) 20%, var(--cherry-red) 100%);
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
 }
 
 .why-item:hover {
+    background: rgb(14, 101, 40);
+
     transform: translateX(10px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
@@ -485,19 +498,19 @@ p {
 .why-number {
     font-size: 2.5rem;
     font-weight: bold;
-    color: var(--cherry-red);
+    color: var(--text-light);
     line-height: 1;
     min-width: 60px;
 }
 
 .why-text h4 {
     font-size: 1.3rem;
-    color: var(--dark-green);
+    color: var(--text-light);
     margin-bottom: 0.5rem;
 }
 
 .why-text p {
-    color: var(--text-dark);
+    color: var(--medium-green);
     font-size: 1rem;
 }
 
@@ -536,7 +549,7 @@ p {
     top: 0;
     bottom: 0;
     width: 3px;
-    background: linear-gradient(180deg, var(--cherry-red) 0%, var(--medium-green) 100%);
+    background: linear-gradient(135deg, var(--text-dark) 20%, var(--cherry-red) 100%);
 }
 
 .timeline-item {
@@ -566,15 +579,15 @@ p {
 .timeline-marker {
     min-width: 60px;
     height: 60px;
-    background: var(--cherry-red);
-    color: white;
+    background: linear-gradient(135deg, var(--text-dark) 20%, var(--cherry-red) 100%);
+    color: var(--text-light);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     font-weight: bold;
-    box-shadow: 0 4px 15px rgba(196, 30, 58, 0.4);
+    box-shadow: 0 4px 15px rgba(4, 102, 48, 0.4);
     position: relative;
     z-index: 2;
     transition: all 0.3s ease;
@@ -582,37 +595,38 @@ p {
 
 .timeline-item:hover .timeline-marker {
     transform: scale(1.2);
-    box-shadow: 0 6px 20px rgba(196, 30, 58, 0.6);
+    box-shadow: 0 6px 20px rgba(4, 102, 48, 0.4);
 }
 
 .timeline-content {
     flex: 1;
-    background: var(--light-green);
+    background: linear-gradient(135deg, var(--text-dark) 20%, var(--cherry-red) 100%);
     padding: 2rem;
     border-radius: 15px;
     transition: all 0.3s ease;
 }
 
 .timeline-item:hover .timeline-content {
-    background: white;
+    background: rgb(14, 101, 40);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
     transform: translateX(10px);
 }
 
 .timeline-content h4 {
     font-size: 1.5rem;
-    color: var(--cherry-red);
+    color: var(--text-light);
     margin-bottom: 0.8rem;
 }
 
 .timeline-content p {
-    color: var(--text-dark);
+    color: var(--medium-green);
     font-size: 1.05rem;
     line-height: 1.7;
 }
 
 /* Team Section */
 .team-section {
+    display: none;
     padding: 5rem 0;
     background: white;
 }
@@ -675,7 +689,7 @@ p {
 /* CTA Section */
 .cta-section {
     padding: 5rem 0;
-    background: linear-gradient(135deg, var(--dark-green) 30%, var(--cherry-red) 100%);
+    background: linear-gradient(135deg, var(--text-dark) 20%, var(--cherry-red) 100%);
     text-align: center;
 }
 
@@ -691,7 +705,7 @@ p {
 
 .cta-content p {
     font-size: 1.3rem;
-    color: var(--text-light);
+    color: var(--medium-green);
     margin-bottom: 2rem;
 }
 
@@ -716,7 +730,7 @@ p {
     overflow: hidden;
 }
 
-.btn::before {
+/* .btn::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -724,10 +738,11 @@ p {
     width: 0;
     height: 0;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid var(--text-light);
+    background: transparent;
     transition: width 0.6s ease, height 0.6s ease;
     transform: translate(-50%, -50%);
-}
+} */
 
 .btn:hover::before {
     width: 300px;
@@ -735,31 +750,34 @@ p {
 }
 
 .btn-primary {
-    background: var(--cherry-red);
-    color: var(--text-light);
+    background: transparent;
+    border: 2px solid var(--text-light);
+    color: var(--medium-green);
 }
 
 .btn-primary:hover {
-    background: #A01828;
+    background: var(--medium-green);
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(196, 30, 58, 0.4);
+    color: var(--cherry-red);
 }
 
 .btn-light {
-    background: var(--text-light);
-    color: var(--dark-green);
+    background: transparent;
+    border: 2px solid var(--medium-green);
+    color: var(--text-light);
 }
 
+
 .btn-light:hover {
-    background: var(--light-green);
+    background: var(--text-light);
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.5);
+    color: var(--medium-green);
 }
 
 /* Footer */
 .footer {
-    background: linear-gradient(135deg, var(--dark-green) 30%, var(--cherry-red) 100%);
-    color: var(--text-light);
+    background: linear-gradient(135deg, var(--text-dark) 20%, var(--cherry-red) 100%);
+    color: var(--medium-green);
     padding: 3rem 0 1rem;
 }
 
@@ -771,7 +789,7 @@ p {
 }
 
 .footer-col h4 {
-    color: var(--text-light);
+    color: var(--medium-green);
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -797,12 +815,12 @@ p {
 }
 
 .footer-logo {
-    height: 60px;
-    margin-bottom: 1rem;
+    height: 100px;
+    width: 120px;
 }
 
 .footer-col p {
-    opacity: 0.9;
+
     line-height: 1.8;
 }
 
@@ -815,7 +833,7 @@ p {
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid var(--text-light);
 }
 
 /* Animations */
@@ -862,7 +880,7 @@ p {
         left: -100%;
         top: 68px;
         flex-direction: column;
-        background: linear-gradient(135deg, var(--dark-green) 30%, var(--cherry-red) 100%);
+        background: linear-gradient(135deg, var(--text-dark) 20%, var(--cherry-red) 100%);
         width: 40%;
         border-bottom-left-radius: 50px;
         text-align: center;
