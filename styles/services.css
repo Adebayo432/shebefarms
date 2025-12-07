@@ -156,7 +156,7 @@ p {
 
 /* Page Hero */
 .page-hero {
-    height: 70vh;
+    height: 50vh;
     position: relative;
     display: flex;
     align-items: center;
@@ -284,6 +284,8 @@ p {
     width: 100%;
     max-width: 100%;
 }
+
+
 
 .service-block.reverse {
     direction: rtl;
