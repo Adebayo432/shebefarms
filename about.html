@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-</script>
-<script type="text/javascript">
-    (function (c, l, a, r, i, t, y) {
-        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-        t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-    })(window, document, "clarity", "script", "YOUR_PROJECT_ID");
-</script>
-
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
     <title>About Us - Modern Tomato Farming Technology | SHEBE FARMS Niger State</title>
     <meta name="description"
         content="Learn about SHEBE FARMS - 50 hectares of precision crop farming in Niger State. Discover our mission, values, technology, and sustainable agriculture practices.">
     <meta name="keywords"
         content="about shebe farms, Niger State agriculture, modern farming Nigeria, sustainable crop farming, precision agriculture technology">
     <link rel="canonical" href="https://www.shebefarms.com/about.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.shebefarms.com/about.html">
+    <meta property="og:title" content="About SHEBE FARMS - Modern Agriculture in Niger State">
+    <meta property="og:description"
+        content="Discover our mission, values, and technology. 50 hectares of precision crop farming.">
+    <meta property="og:image" content="https://www.shebefarms.com/images/shebe-logo.png">
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/about.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/shebe logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/shebe logo.png" type="image/png">
 </head>
 
 <body>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="logo-container">
-                <a href="index.html" class="active">
-                    <img src="images/shebe logo.png" alt="SHEBE FARMS Logo" class="logo"> <span class="logo-text">SHEBE
-                        FARMS</span></a>
+                <a href="index.html" aria-label="SHEBE FARMS Home">
+                    <img src="images/shebe logo.png" alt="SHEBE FARMS Logo" class="logo" width="50" height="50">
+                    <span class="logo-text">SHEBE FARMS</span>
+                </a>
             </div>
 
-            <div class="menu-toggle" id="menuToggle">
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
 
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html">Home</a></li>
-
                 <li><a href="services.html">Services</a></li>
                 <li><a href="blog.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -57,335 +62,267 @@
         </div>
     </nav>
 
-    <!-- Hero Banner -->
-    <section class="page-hero">
-        <div class="hero-overlay"><img src="images/landcape-image.jpg" class="hero-overlay-img" alt=""></div>
-        <div class="hero-content">
-            <h1>About SHEBE FARMS</h1>
-            <p>Where Precision Meets Innovation</p>
-        </div>
-    </section>
+    <main>
+        <!-- Hero Banner -->
+        <header class="page-hero">
+            <div class="hero-overlay">
+                <img src="images/landcape-image.jpg" class="hero-overlay-img" alt="SHEBE FARMS landscape" width="1920"
+                    height="1080" loading="eager">
+            </div>
+            <div class="hero-content">
+                <h1>About SHEBE FARMS</h1>
+                <p>Where Precision Meets Innovation</p>
+            </div>
+        </header>
 
-    <!-- Our Story -->
-    <section class="our-story">
-        <div class="container">
-            <div class="story-grid">
-
-                <div class="story-content">
-                    <span class="section-label">Our Journey</span>
-                    <h2>Growing Better Crops Using Smarter Systems</h2>
-                    <p>Founded with a vision to revolutionize agriculture in Niger State, SHEBE Farms began as a mission
-                        to bridge the gap between traditional farming methods and modern agricultural technology.</p>
-                    <p>Established on 50 hectares of fertile land between Minna and Bida in Niger State, we operate the
-                        largest commercial crop farm in the region. Our farm combines modern equipment, smart farming
-                        tools, data analytics, and responsible land management to produce high-quality, high-yield
-                        tomatoes at commercial scale.</p>
-                    <p>Today, we operate one of the most advanced tomato production systems in the region, using a blend
-                        of greenhouse structures, open-field cultivation, and technology-informed decision-making.</p>
-                </div>
-                <div class="story-image">
-                    <div class="image-placeholder">
-                        <img src="images/IMG-20251204-WA0019.jpg" alt="Farm Landscape" class="image-placeholder">
+        <!-- Our Story -->
+        <section class="our-story">
+            <div class="container">
+                <div class="story-grid">
+                    <div class="story-content">
+                        <span class="section-label">Our Journey</span>
+                        <h2>Growing Better Crops Using Smarter Systems</h2>
+                        <p>Founded with a vision to revolutionize agriculture in Niger State, SHEBE Farms began as a
+                            mission to bridge the gap between traditional farming methods and modern agricultural
+                            technology.</p>
+                        <p>Established on 50 hectares of fertile land between Minna and Bida in Niger State, we operate
+                            the largest commercial crop farm in the region. Our farm combines modern equipment, smart
+                            farming tools, data analytics, and responsible land management to produce high-quality,
+                            high-yield tomatoes at commercial scale.</p>
+                        <p>Today, we operate one of the most advanced tomato production systems in the region, using a
+                            blend of greenhouse structures, open-field cultivation, and technology-informed
+                            decision-making.</p>
+                    </div>
+                    <div class="story-image">
+                        <img src="images/IMG-20251204-WA0019.jpg" alt="Farm Landscape" class="image-placeholder"
+                            width="600" height="450" loading="lazy">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Mission & Vision -->
-    <section class="mission-vision">
-        <div class="container">
-            <div class="mv-grid">
-                <div class="mv-card mission">
-                    <div class="mv-icon"><i class="fas fa-bullseye"></i></div>
-                    <h3>Our Mission</h3>
-                    <p>To produce high-quality crops at commercial scale using technology, innovation, and
-                        sustainable practices — while contributing to food security, employment, and agricultural
-                        development in Niger State and beyond.</p>
-                </div>
-                <div class="mv-card vision">
-                    <div class="mv-icon"><i class="fas fa-eye"></i></div>
-                    <h3>Our Vision</h3>
-                    <p>To become Nigeria's leading model of modern, data-driven agriculture, setting new standards for
-                        productivity, sustainability, and reliability across the agricultural value chain.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Core Values -->
-    <section class="values-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">What Drives Us</span>
-                <h2>Our Core Values</h2>
-                <p>The principles that guide everything we do</p>
-            </div>
-
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-leaf"></i></div>
-                    <h4>Sustainability at Scale</h4>
-                    <p>We believe in farming that regenerates the land rather than depleting it. Our sustainable
-                        practices ensure long-term productivity for generations to come.</p>
-                </div>
-
-                <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-gem"></i></div>
-                    <h4>Quality</h4>
-                    <p>Excellence is non-negotiable. From our crops to our services, we maintain the highest standards
-                        in everything we deliver.</p>
-                </div>
-
-                <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-handshake"></i></div>
-                    <h4>Transparency & Traceability</h4>
-                    <p>We build trust through honest dealings, transparent practices, and keeping our promises to
-                        customers and partners.</p>
-                </div>
-
-                <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
-                    <h4>Innovation</h4>
-                    <p>We embrace modern technology and techniques to improve efficiency while respecting traditional
-                        farming wisdom.</p>
-                </div>
-
-                <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-users"></i></div>
-                    <h4>Reliable Commercial Supply</h4>
-                    <p>Our success is tied to the prosperity of our community. We support local initiatives and give
-                        back whenever possible.</p>
-                </div>
-
-                <div class="value-card">
-                    <div class="value-icon"><i class="fas fa-chart-line"></i></div>
-                    <h4>Innovation-Driven Growth</h4>
-                    <p>We continuously strive for improvement, learning from each season to provide better service and
-                        results.</p>
+        <!-- Mission & Vision -->
+        <section class="mission-vision">
+            <div class="container">
+                <div class="mv-grid">
+                    <article class="mv-card mission">
+                        <div class="mv-icon" aria-hidden="true"><i class="fas fa-bullseye"></i></div>
+                        <h2>Our Mission</h2>
+                        <p>To produce high-quality crops at commercial scale using technology, innovation, and
+                            sustainable practices — while contributing to food security, employment, and agricultural
+                            development in Niger State and beyond.</p>
+                    </article>
+                    <article class="mv-card vision">
+                        <div class="mv-icon" aria-hidden="true"><i class="fas fa-eye"></i></div>
+                        <h2>Our Vision</h2>
+                        <p>To become Nigeria's leading model of modern, data-driven agriculture, setting new standards
+                            for productivity, sustainability, and reliability across the agricultural value chain.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Why Choose Us -->
-    <section class="why-choose">
-        <div class="container">
-            <div class="why-grid">
-                <div class="why-content">
-                    <span class="section-label">Why SHEBE FARMS</span>
-                    <h2>What Sets Us Apart</h2>
-                    <div class="why-list">
-                        <div class="why-item">
-                            <div class="why-number">01</div>
-                            <div class="why-text">
-                                <h4>Mechanized Farming</h4>
-                                <p> Operating on 50 hectares in Niger State, we utilize advanced machinery for every
-                                    stage, from land preparation and planting to harvesting and post-harvest handling.
-                                    Our Ridge Maker, sprayers, transplanter, allow us to boost
-                                    productivity, reduce labor costs, and maintain consistency across open fields.</p>
-                            </div>
-                        </div>
-
-                        <div class="why-item">
-                            <div class="why-number">02</div>
-                            <div class="why-text">
-                                <h4>Smart Farming Technology</h4>
-                                <p>Advanced drip irrigation, sensor-based monitoring, GPS-guided machinery, greenhouse
-                                    climate management, and data-driven crop decisions.</p>
-                            </div>
-                        </div>
-
-                        <div class="why-item">
-                            <div class="why-number">03</div>
-                            <div class="why-text">
-                                <h4>Advanced IPM (Integrated Pest Management)</h4>
-                                <p>We use traps, scouting, early detection systems, soil-friendly treatments, and
-                                    minimal chemical intervention for safer, cleaner produce.</p>
-                            </div>
-                        </div>
-
-                        <div class="why-item">
-                            <div class="why-number">04</div>
-                            <div class="why-text">
-                                <h4>Sustainability at Scale</h4>
-                                <p>Minimal tillage, biochar incorporation, microbes and organic manure application, and
-                                    efficient water-use through drip lines.</p>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Core Values -->
+        <section class="values-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">What Drives Us</span>
+                    <h2>Our Core Values</h2>
+                    <p>The principles that guide everything we do</p>
                 </div>
 
-                <div class="why-images">
-                    <div class="image-placeholder large">
-                        <img src="images/farm-instructor-image.jpg" alt="Team at Work" class="image-placeholder large">
-                    </div>
-                    <div class="image-placeholder small">
-                        <img src="images/tractor-image.jpg" alt="Equipment" class="image-placeholder small">
-                    </div>
+                <div class="values-grid">
+                    <article class="value-card">
+                        <div class="value-icon" aria-hidden="true"><i class="fas fa-leaf"></i></div>
+                        <h3>Sustainability at Scale</h3>
+                        <p>We believe in farming that regenerates the land rather than depleting it. Our sustainable
+                            practices ensure long-term productivity for generations to come.</p>
+                    </article>
+
+                    <article class="value-card">
+                        <div class="value-icon" aria-hidden="true"><i class="fas fa-gem"></i></div>
+                        <h3>Quality</h3>
+                        <p>Excellence is non-negotiable. From our crops to our services, we maintain the highest
+                            standards in everything we deliver.</p>
+                    </article>
+
+                    <article class="value-card">
+                        <div class="value-icon" aria-hidden="true"><i class="fas fa-handshake"></i></div>
+                        <h3>Transparency & Traceability</h3>
+                        <p>We build trust through honest dealings, transparent practices, and keeping our promises to
+                            customers and partners.</p>
+                    </article>
+
+                    <article class="value-card">
+                        <div class="value-icon" aria-hidden="true"><i class="fas fa-lightbulb"></i></div>
+                        <h3>Innovation</h3>
+                        <p>We embrace modern technology and techniques to improve efficiency while respecting
+                            traditional farming wisdom.</p>
+                    </article>
+
+                    <article class="value-card">
+                        <div class="value-icon" aria-hidden="true"><i class="fas fa-users"></i></div>
+                        <h3>Reliable Commercial Supply</h3>
+                        <p>Our success is tied to the prosperity of our community. We support local initiatives and give
+                            back whenever possible.</p>
+                    </article>
+
+                    <article class="value-card">
+                        <div class="value-icon" aria-hidden="true"><i class="fas fa-chart-line"></i></div>
+                        <h3>Innovation-Driven Growth</h3>
+                        <p>We continuously strive for improvement, learning from each season to provide better service
+                            and results.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Our Approach -->
-    <section class="approach-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Our Process</span>
-                <h2>How We Work</h2>
-                <p>A systematic approach to agricultural excellence</p>
-            </div>
+        <!-- Why Choose Us -->
+        <section class="why-choose">
+            <div class="container">
+                <div class="why-grid">
+                    <div class="why-content">
+                        <span class="section-label">Why SHEBE FARMS</span>
+                        <h2>What Sets Us Apart</h2>
+                        <div class="why-list">
+                            <article class="why-item">
+                                <div class="why-number">01</div>
+                                <div class="why-text">
+                                    <h3>Mechanized Farming</h3>
+                                    <p>Operating on 50 hectares in Niger State, we utilize advanced machinery for every
+                                        stage, from land preparation and planting to harvesting and post-harvest
+                                        handling. Our Ridge Maker, sprayers, transplanter, allow us to boost
+                                        productivity, reduce labor costs, and maintain consistency across open fields.
+                                    </p>
+                                </div>
+                            </article>
 
-            <div class="approach-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker">1</div>
-                    <div class="timeline-content">
-                        <h4>Data Collection & Analysis</h4>
-                        <p>We use sensor-based monitoring and field data to understand soil health, weather patterns,
-                            and crop needs.</p>
-                    </div>
-                </div>
+                            <article class="why-item">
+                                <div class="why-number">02</div>
+                                <div class="why-text">
+                                    <h3>Smart Farming Technology</h3>
+                                    <p>Advanced drip irrigation, sensor-based monitoring, GPS-guided machinery,
+                                        greenhouse climate management, and data-driven crop decisions.</p>
+                                </div>
+                            </article>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker">2</div>
-                    <div class="timeline-content">
-                        <h4>Precision Planning</h4>
-                        <p>Our experts develop customized plans using GPS-guided machinery and data-driven insights for
-                            optimal results.</p>
-                    </div>
-                </div>
+                            <article class="why-item">
+                                <div class="why-number">03</div>
+                                <div class="why-text">
+                                    <h3>Advanced IPM (Integrated Pest Management)</h3>
+                                    <p>We use traps, scouting, early detection systems, soil-friendly treatments, and
+                                        minimal chemical intervention for safer, cleaner produce.</p>
+                                </div>
+                            </article>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker">3</div>
-                    <div class="timeline-content">
-                        <h4>Smart Implementation</h4>
-                        <p>We execute with precision using advanced drip irrigation, fertigation systems, and greenhouse
-                            climate management.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker">4</div>
-                    <div class="timeline-content">
-                        <h4>Continuous Monitoring</h4>
-                        <p>Remote field monitoring and real-time data tracking ensure quality standards and allow for
-                            immediate adjustments.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker">5</div>
-                    <div class="timeline-content">
-                        <h4>Quality Assurance</h4>
-                        <p>Every action is measured, recorded, and optimized — from planting to harvest — ensuring
-                            consistent, high-quality output.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="team-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Meet Our Team</span>
-                <h2>The People Behind SHEBE FARMS</h2>
-                <p>Dedicated professionals committed to agricultural excellence</p>
-            </div>
-
-            <div class="team-grid">
-                <div class="team-member">
-                    <div class="member-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user" style="font-size: 4rem; color: var(--dark-green);"></i>
+                            <article class="why-item">
+                                <div class="why-number">04</div>
+                                <div class="why-text">
+                                    <h3>Sustainability at Scale</h3>
+                                    <p>Minimal tillage, biochar incorporation, microbes and organic manure application,
+                                        and efficient water-use through drip lines.</p>
+                                </div>
+                            </article>
                         </div>
                     </div>
-                    <div class="member-info">
-                        <h3>Member Name 1</h3>
-                        <p class="member-role">Position/Role</p>
-                    </div>
-                </div>
 
-                <div class="team-member">
-                    <div class="member-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user" style="font-size: 4rem; color: var(--dark-green);"></i>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h3>Member Name 2</h3>
-                        <p class="member-role">Position/Role</p>
-                    </div>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user" style="font-size: 4rem; color: var(--dark-green);"></i>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h3>Member Name 3</h3>
-                        <p class="member-role">Position/Role</p>
-                    </div>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user" style="font-size: 4rem; color: var(--dark-green);"></i>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h3>Member Name 4</h3>
-                        <p class="member-role">Position/Role</p>
-                    </div>
-                </div>
-
-                <div class="team-member">
-                    <div class="member-image">
-                        <div class="image-placeholder">
-                            <i class="fas fa-user" style="font-size: 4rem; color: var(--dark-green);"></i>
-                        </div>
-                    </div>
-                    <div class="member-info">
-                        <h3>Member Name 5</h3>
-                        <p class="member-role">Position/Role</p>
+                    <div class="why-images">
+                        <img src="images/farm-instructor-image.jpg" alt="Team at Work" class="image-placeholder large"
+                            width="600" height="350" loading="lazy">
+                        <img src="images/tractor-image.jpg" alt="Equipment" class="image-placeholder small" width="290"
+                            height="250" loading="lazy">
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Partner With Us?</h2>
-                <p>Whether you are a distributor, wholesaler, retailer, investor, or agricultural partner, SHEBE Farms
-                    welcomes collaboration.</p>
-                <div class="cta-buttons">
-                    <a href="services.html" class="btn btn-primary">Our Services</a>
-                    <a href="contact.html" class="btn btn-light">Contact Us</a>
+        <!-- Our Approach -->
+        <section class="approach-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Our Process</span>
+                    <h2>How We Work</h2>
+                    <p>A systematic approach to agricultural excellence</p>
+                </div>
+
+                <div class="approach-timeline">
+                    <article class="timeline-item">
+                        <div class="timeline-marker">1</div>
+                        <div class="timeline-content">
+                            <h3>Data Collection & Analysis</h3>
+                            <p>We use sensor-based monitoring and field data to understand soil health, weather
+                                patterns, and crop needs.</p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker">2</div>
+                        <div class="timeline-content">
+                            <h3>Precision Planning</h3>
+                            <p>Our experts develop customized plans using GPS-guided machinery and data-driven insights
+                                for optimal results.</p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker">3</div>
+                        <div class="timeline-content">
+                            <h3>Smart Implementation</h3>
+                            <p>We execute with precision using advanced drip irrigation, fertigation systems, and
+                                greenhouse climate management.</p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker">4</div>
+                        <div class="timeline-content">
+                            <h3>Continuous Monitoring</h3>
+                            <p>Remote field monitoring and real-time data tracking ensure quality standards and allow
+                                for immediate adjustments.</p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <div class="timeline-marker">5</div>
+                        <div class="timeline-content">
+                            <h3>Quality Assurance</h3>
+                            <p>Every action is measured, recorded, and optimized — from planting to harvest — ensuring
+                                consistent, high-quality output.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Partner With Us?</h2>
+                    <p>Whether you are a distributor, wholesaler, retailer, investor, or agricultural partner, SHEBE
+                        Farms welcomes collaboration.</p>
+                    <div class="cta-buttons">
+                        <a href="services.html" class="btn btn-primary">Our Services</a>
+                        <a href="contact.html" class="btn btn-light">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <img src="images/logo.png" alt="SHEBE FARMS Logo" class="footer-logo" width="80" height="80">
+                    <img src="images/logo.png" alt="SHEBE FARMS Logo" class="footer-logo" width="120" height="100"
+                        loading="lazy">
                     <p>Growing better Crops using smarter systems. Nigeria's leading model of modern, data-driven
                         agriculture.</p>
                 </div>
 
                 <nav class="footer-col" aria-label="Footer navigation">
-                    <h4>Quick Links</h4>
+                    <h3>Quick Links</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="services.html">Services</a></li>
@@ -395,32 +332,26 @@
                 </nav>
 
                 <div class="footer-col">
-                    <h4>Follow Us</h4>
+                    <h3>Follow Us</h3>
                     <ul>
-                        <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook"><i
-                                    class="fab fa-facebook" aria-hidden="true"></i> Facebook</a></li>
-                        <li><a href="https://www.instagram.com/shebefarms?utm_source=qr&igsh=MWJ6dWp0dWZ6a3JvNQ=="
-                                target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram"><i
-                                    class="fab fa-instagram" aria-hidden="true"></i> Instagram</a></li>
-                        <li><a href="https://youtube.com/@shebefarms?si=_XGWCYY1deM_XAYU" target="_blank"
-                                rel="noopener noreferrer" aria-label="Subscribe to our YouTube"><i
-                                    class="fab fa-youtube" aria-hidden="true"></i>
-                                YouTube</a></li>
-                        <li><a href="https://www.tiktok.com/@shebefarms?_r=1&_t=ZS-921QcpBgcrQ" target="_blank"
-                                rel="noopener noreferrer" aria-label="Follow us on TikTok"><i class="fab fa-tiktok"
-                                    aria-hidden="true"></i> TikTok</a></li>
+                        <li><a href="#" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="https://www.instagram.com/shebefarms" target="_blank" rel="noopener"><i
+                                    class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="https://youtube.com/@shebefarms" target="_blank" rel="noopener"><i
+                                    class="fab fa-youtube"></i> YouTube</a></li>
+                        <li><a href="https://www.tiktok.com/@shebefarms" target="_blank" rel="noopener"><i
+                                    class="fab fa-tiktok"></i> TikTok</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
-                    <h4>Contact Info</h4>
+                    <h3>Contact Info</h3>
                     <address class="contact-info">
                         <ul>
-                            <li><i class="fas fa-phone" aria-hidden="true"></i> <a
-                                    href="tel:+2348135308144">+2348135308144</a></li>
-                            <li><i class="fas fa-envelope" aria-hidden="true"></i> <a
+                            <li><i class="fas fa-phone"></i> <a href="tel:+2348135308144">+2348135308144</a></li>
+                            <li><i class="fas fa-envelope"></i> <a
                                     href="mailto:contact@shebefarms.com">contact@shebefarms.com</a></li>
-                            <li><i class="fas fa-clock" aria-hidden="true"></i> Mon - Sat: 7AM - 6PM</li>
+                            <li><i class="fas fa-clock"></i> Mon - Sat: 7AM - 6PM</li>
                         </ul>
                     </address>
                 </div>
@@ -431,7 +362,27 @@
             </div>
         </div>
     </footer>
-    <script src="scripts/about.js"></script>
+
+    <!-- Scripts -->
+    <script src="scripts/about.js" defer></script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "YOUR_PROJECT_ID");
+    </script>
 </body>
 
 </html>

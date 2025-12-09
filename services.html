@@ -1,20 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-</script>
-
-<script type="text/javascript">
-    (function (c, l, a, r, i, t, y) {
-        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-        t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-    })(window, document, "clarity", "script", "YOUR_PROJECT_ID");
-</script>
 
 <head>
     <meta charset="UTF-8">
@@ -54,64 +39,13 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/services.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Favicons -->
     <link rel="icon" href="images/shebe logo.png" type="image/png">
 
-    <!-- Service Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Agricultural Services",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "SHEBE FARMS",
-        "telephone": "+2348135308144",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Niger State",
-          "addressCountry": "NG"
-        }
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "Nigeria"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Agricultural Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Commercial Tomato Production",
-              "description": "50 hectares precision-grown tomatoes with year-round supply"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Smart Farming Technology",
-              "description": "Data-driven agriculture with sensor-based monitoring"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Agricultural Consultation",
-              "description": "Expert guidance on modern farming practices"
-            }
-          }
-        ]
-      }
-    }
-    </script>
+
 </head>
 
 <body>
@@ -120,8 +54,8 @@
         <div class="nav-container">
             <div class="logo-container">
                 <a href="index.html" aria-label="SHEBE FARMS Home">
-                    <img src="images/shebe logo.png" alt="SHEBE FARMS Logo - Modern Agriculture" class="logo" width="50"
-                        height="50">
+                    <img src="images/shebe logo.png" alt="SHEBE FARMS Logo" class="logo" width="50" height="50">
+
                     <span class="logo-text">SHEBE FARMS</span>
                 </a>
             </div>
@@ -141,352 +75,362 @@
         </div>
     </nav>
 
-
-    <!-- Hero Banner -->
-    <header class="page-hero">
-        <div class="hero-overlay"><img src="images/landcape-image.jpg" class="hero-overlay-img" alt=""></div>
-        <div class="hero-content">
-            <h1>Our Services</h1>
-            <p>Comprehensive Agricultural Solutions for Modern Farming</p>
-        </div>
-    </header>
-
-    <!-- Services Introduction -->
-    <section class="services-intro" aria-labelledby="intro-heading">
-        <div class="container">
-            <div class="intro-content">
-                <span class="section-label">What We Do</span>
-                <h2 id="intro-heading">Complete Farm Management Solutions</h2>
-                <p>At SHEBE FARMS, we offer a full spectrum of agricultural services designed to meet the diverse needs
-                    of modern farming. From precision agriculture to commercial supply, our experienced team and
-                    state-of-the-art equipment ensure optimal results for every project.</p>
+    <main>
+        <!-- Hero Banner -->
+        <header class="page-hero">
+            <div class="hero-overlay"><img src="images/landcape-image.jpg" class="hero-overlay-img" alt="" width="1920"
+                    height="1080" loading="eager"></div>
+            <div class="hero-content">
+                <h1>Our Services</h1>
+                <p>Comprehensive Agricultural Solutions for Modern Farming</p>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- Main Services -->
-    <section class="main-services" id="cultivation" aria-labelledby="tomato-heading">
-        <div class="container">
-            <article class="service-block">
-                <div class="service-content">
-                    <span class="service-number">01</span> <br>
-                    <span class="coming-soon-badge">Coming Soon</span>
-                    <h2 id="tomato-heading">Commercial Tomato Production</h2>
-                    <p>High-quality, high-yield Crop production at commercial scale using precision farming
-                        techniques, greenhouse technology, and data-driven decision-making for reliable year-round
-                        supply.</p>
-                    <ul class="service-features">
-                        <li>50 hectares of precision-grown Crops</li>
-                        <li>Greenhouse and open-field cultivation</li>
-                        <li>Advanced drip irrigation systems</li>
-                        <li>Sensor-based crop monitoring</li>
-                        <li>GPS-guided machinery</li>
-                        <li>Year-round production capacity</li>
-                    </ul>
-                    <!-- <button class="btn btn-primary btn-coming-soon" disabled
+        <!-- Services Introduction -->
+        <section class="services-intro" aria-labelledby="intro-heading">
+            <div class="container">
+                <div class="intro-content">
+                    <span class="section-label">What We Do</span>
+                    <h2 id="intro-heading">Complete Farm Management Solutions</h2>
+                    <p>At SHEBE FARMS, we offer a full spectrum of agricultural services designed to meet the diverse
+                        needs
+                        of modern farming. From precision agriculture to commercial supply, our experienced team and
+                        state-of-the-art equipment ensure optimal results for every project.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Services -->
+        <section class="main-services" id="cultivation" aria-labelledby="tomato-heading">
+            <div class="container">
+                <article class="service-block">
+                    <div class="service-content">
+                        <span class="service-number">01</span> <br>
+                        <span class="coming-soon-badge">Coming Soon</span>
+                        <h2 id="tomato-heading">Commercial Tomato Production</h2>
+                        <p>High-quality, high-yield Crop production at commercial scale using precision farming
+                            techniques, greenhouse technology, and data-driven decision-making for reliable year-round
+                            supply.</p>
+                        <ul class="service-features">
+                            <li>50 hectares of precision-grown Crops</li>
+                            <li>Greenhouse and open-field cultivation</li>
+                            <li>Advanced drip irrigation systems</li>
+                            <li>Sensor-based crop monitoring</li>
+                            <li>GPS-guided machinery</li>
+                            <li>Year-round production capacity</li>
+                        </ul>
+                        <!-- <button class="btn btn-primary btn-coming-soon" disabled
                         aria-label="Commercial tomato production service coming soon">Coming Soon</button> -->
 
-                </div>
-                <div class="service-image">
-                    <img src="images/Commercial Tomato Production.webp" alt="Smart farming equipment and technology"
-                        class="image-placeholder" width="600" height="400" loading="lazy">
-                </div>
+                    </div>
+                    <div class="service-image">
+                        <img src="images/Commercial Tomato Production.webp" alt="Smart farming equipment and technology"
+                            class="image-placeholder" width="600" height="400" loading="lazy">
+                    </div>
 
 
-                <div class="service-content">
-                    <span class="service-number">02</span> <br>
-                    <span class="coming-soon-badge">Coming Soon</span>
-                    <h2 id="tomato-heading">Drone Services & Aerial Solutions </h2>
-                    <p>Professional, tech-enabled drone operations offering precision, speed, and insight across
-                        agriculture, infrastructure, and logistics. Reliable data capture and delivery with end-to-end
-                        visibility and efficiency.
-                    </p>
-                    <ul class="service-features">
-                        <li>High-resolution aerial mapping & imaging</li>
-                        <li>Real-time crop health monitoring
-                        </li>
-                        <li>Infrastructure inspection & analysis</li>
-                        <li>On-demand delivery & logistics support</li>
-                        <li>Data analytics & reporting solutions</li>
-                        <li>Scalable deployment for bulk operations</li>
-                    </ul>
-                    <!-- <button class="btn btn-primary btn-coming-soon" disabled
+                    <div class="service-content">
+                        <span class="service-number">02</span> <br>
+                        <span class="coming-soon-badge">Coming Soon</span>
+                        <h2 id="tomato-heading">Drone Services & Aerial Solutions </h2>
+                        <p>Professional, tech-enabled drone operations offering precision, speed, and insight across
+                            agriculture, infrastructure, and logistics. Reliable data capture and delivery with
+                            end-to-end
+                            visibility and efficiency.
+                        </p>
+                        <ul class="service-features">
+                            <li>High-resolution aerial mapping & imaging</li>
+                            <li>Real-time crop health monitoring
+                            </li>
+                            <li>Infrastructure inspection & analysis</li>
+                            <li>On-demand delivery & logistics support</li>
+                            <li>Data analytics & reporting solutions</li>
+                            <li>Scalable deployment for bulk operations</li>
+                        </ul>
+                        <!-- <button class="btn btn-primary btn-coming-soon" disabled
                         aria-label="Commercial tomato production service coming soon">Coming Soon</button> -->
-                </div>
-                <div class="service-image">
-                    <img src="images/Drone.webp" alt="Smart farming equipment and technology" class="image-placeholder"
-                        width="600" height="400" loading="lazy">
-                </div>
-            </article>
-        </div>
-    </section>
+                    </div>
+                    <div class="service-image">
+                        <img src="images/Drone.webp" alt="Smart farming equipment and technology"
+                            class="image-placeholder" width="600" height="400" loading="lazy">
+                    </div>
+                </article>
+            </div>
+        </section>
 
-    <section class="main-services alt" id="equipment" aria-labelledby="tech-heading">
-        <div class="container">
-            <article class="service-block reverse">
-                <div class="service-image">
-                    <img src="images/Smart Farming Technology.webp" alt="Smart farming equipment and technology"
-                        class="image-placeholder" width="600" height="400" loading="lazy">
-                </div>
-                <div class="service-content">
-                    <span class="service-number">03</span> <br>
-                    <span class="coming-soon-badge">Coming Soon</span>
-                    <h2 id="tech-heading">Smart Farming Technology</h2>
-                    <p>Access to cutting-edge agricultural technology and data analytics that optimize farming
-                        operations, reduce costs, and maximize yields through precision agriculture.</p>
-                    <ul class="service-features">
-                        <li>Data-driven crop decisions</li>
-                        <li>Remote field monitoring systems</li>
-                        <li>Climate management technology</li>
-                        <li>Fertigation systems</li>
-                        <li>Advanced IPM solutions</li>
-                        <li>Real-time analytics dashboard</li>
-                    </ul>
-                    <!-- <button class="btn btn-primary btn-coming-soon" disabled
+        <section class="main-services alt" id="equipment" aria-labelledby="tech-heading">
+            <div class="container">
+                <article class="service-block reverse">
+                    <div class="service-image">
+                        <img src="images/Smart Farming Technology.webp" alt="Smart farming equipment and technology"
+                            class="image-placeholder" width="600" height="400" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <span class="service-number">03</span> <br>
+                        <span class="coming-soon-badge">Coming Soon</span>
+                        <h2 id="tech-heading">Smart Farming Technology</h2>
+                        <p>Access to cutting-edge agricultural technology and data analytics that optimize farming
+                            operations, reduce costs, and maximize yields through precision agriculture.</p>
+                        <ul class="service-features">
+                            <li>Data-driven crop decisions</li>
+                            <li>Remote field monitoring systems</li>
+                            <li>Climate management technology</li>
+                            <li>Fertigation systems</li>
+                            <li>Advanced IPM solutions</li>
+                            <li>Real-time analytics dashboard</li>
+                        </ul>
+                        <!-- <button class="btn btn-primary btn-coming-soon" disabled
                         aria-label="Smart farming technology service coming soon">Coming Soon</button> -->
-                </div>
-            </article>
-        </div>
-    </section>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-    <section class="main-services" id="consultation" aria-labelledby="consult-heading">
-        <div class="container">
-            <article class="service-block">
-                <div class="service-content">
-                    <span class="service-number">04</span> <br>
-                    <span class="coming-soon-badge">Coming Soon</span>
-                    <h2 id="consult-heading">Agricultural Consultation & Training</h2>
-                    <p>Expert guidance and training programs designed to help farmers and agricultural businesses adopt
-                        modern farming practices and improve productivity.</p>
-                    <ul class="service-features">
-                        <li>Precision agriculture consulting</li>
-                        <li>Farm management training</li>
-                        <li>Technology integration support</li>
-                        <li>Sustainability practices guidance</li>
-                        <li>Data analytics interpretation</li>
-                        <li>Best practices workshops</li>
-                    </ul>
-                    <!-- <button class="btn btn-primary btn-coming-soon" disabled
+        <section class="main-services" id="consultation" aria-labelledby="consult-heading">
+            <div class="container">
+                <article class="service-block">
+                    <div class="service-content">
+                        <span class="service-number">04</span> <br>
+                        <span class="coming-soon-badge">Coming Soon</span>
+                        <h2 id="consult-heading">Agricultural Consultation & Training</h2>
+                        <p>Expert guidance and training programs designed to help farmers and agricultural businesses
+                            adopt
+                            modern farming practices and improve productivity.</p>
+                        <ul class="service-features">
+                            <li>Precision agriculture consulting</li>
+                            <li>Farm management training</li>
+                            <li>Technology integration support</li>
+                            <li>Sustainability practices guidance</li>
+                            <li>Data analytics interpretation</li>
+                            <li>Best practices workshops</li>
+                        </ul>
+                        <!-- <button class="btn btn-primary btn-coming-soon" disabled
                         aria-label="Agricultural consultation service coming soon">Coming Soon</button> -->
-                </div>
-                <div class="service-image">
-                    <img src="images/farm-instructor-image.jpg" alt="Agricultural consultation and training"
-                        class="image-placeholder" width="600" height="400" loading="lazy">
-                </div>
-            </article>
-        </div>
-    </section>
+                    </div>
+                    <div class="service-image">
+                        <img src="images/farm-instructor-image.jpg" alt="Agricultural consultation and training"
+                            class="image-placeholder" width="600" height="400" loading="lazy">
+                    </div>
+                </article>
+            </div>
+        </section>
 
-    <section class="main-services alt" id="maintenance" aria-labelledby="supply-heading">
-        <div class="container">
-            <article class="service-block reverse">
-                <div class="service-image">
-                    <img src="images/Supply Chain & Distribution.png" alt="Supply chain and distribution services"
-                        class="image-placeholder" width="600" height="400" loading="lazy">
-                </div>
-                <div class="service-content">
-                    <span class="service-number">05</span> <br>
-                    <span class="coming-soon-badge">Coming Soon</span>
-                    <h2 id="supply-heading">Supply Chain & Distribution</h2>
-                    <p>Reliable commercial supply of high-quality Crops with full traceability and transparency from
-                        farm to market, ensuring freshness and quality.</p>
-                    <ul class="service-features">
-                        <li>Direct farm-to-market supply</li>
-                        <li>Quality assurance protocols</li>
-                        <li>Traceability systems</li>
-                        <li>Flexible delivery schedules</li>
-                        <li>Bulk order management</li>
-                        <li>Partnership opportunities</li>
-                    </ul>
-                    <!-- <button class="btn btn-primary btn-coming-soon" disabled
+        <section class="main-services alt" id="maintenance" aria-labelledby="supply-heading">
+            <div class="container">
+                <article class="service-block reverse">
+                    <div class="service-image">
+                        <img src="images/Supply Chain & Distribution.png" alt="Supply chain and distribution services"
+                            class="image-placeholder" width="600" height="400" loading="lazy">
+                    </div>
+                    <div class="service-content">
+                        <span class="service-number">05</span> <br>
+                        <span class="coming-soon-badge">Coming Soon</span>
+                        <h2 id="supply-heading">Supply Chain & Distribution</h2>
+                        <p>Reliable commercial supply of high-quality Crops with full traceability and transparency from
+                            farm to market, ensuring freshness and quality.</p>
+                        <ul class="service-features">
+                            <li>Direct farm-to-market supply</li>
+                            <li>Quality assurance protocols</li>
+                            <li>Traceability systems</li>
+                            <li>Flexible delivery schedules</li>
+                            <li>Bulk order management</li>
+                            <li>Partnership opportunities</li>
+                        </ul>
+                        <!-- <button class="btn btn-primary btn-coming-soon" disabled
                         aria-label="Supply chain service coming soon">Coming Soon</button> -->
+                    </div>
+
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Additional Services -->
+        <section class="additional-services" aria-labelledby="additional-heading">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">More Services</span>
+                    <h2 id="additional-heading">Additional Agricultural Solutions</h2>
                 </div>
 
-            </article>
-
-        </div>
-    </section>
-
-    <!-- Additional Services -->
-    <section class="additional-services" aria-labelledby="additional-heading">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">More Services</span>
-                <h2 id="additional-heading">Additional Agricultural Solutions</h2>
-            </div>
-
-            <div class="additional-grid">
-                <article class="additional-card">
-                    <span class="coming-soon-mini">Coming Soon</span>
-                    <div class="additional-icon" aria-hidden="true"><i class="fas fa-flask"></i></div>
-                    <h3>Soil Testing & Analysis</h3>
-                    <p>Comprehensive soil health assessment using advanced testing methods to determine optimal crop
-                        selection and fertilization strategies.</p>
-                </article>
-
-                <article class="additional-card">
-                    <span class="coming-soon-mini">Coming Soon</span>
-                    <div class="additional-icon" aria-hidden="true"><i class="fas fa-tint"></i></div>
-                    <h3>Irrigation Solutions</h3>
-                    <p>Design, installation, and management of efficient drip irrigation systems for water conservation
-                        and optimal crop hydration.</p>
-                </article>
-
-                <article class="additional-card">
-                    <span class="coming-soon-mini">Coming Soon</span>
-                    <div class="additional-icon" aria-hidden="true"><i class="fas fa-seedling"></i></div>
-                    <h3>Sustainable Farming</h3>
-                    <p>Specialized services for implementing sustainable and regenerative farming practices that protect
-                        and enhance soil health.</p>
-                </article>
-
-                <article class="additional-card">
-                    <span class="coming-soon-mini">Coming Soon</span>
-                    <div class="additional-icon" aria-hidden="true"><i class="fas fa-chart-bar"></i></div>
-                    <h3>Yield Optimization</h3>
-                    <p>Data-driven strategies to maximize crop productivity and quality output using precision
-                        agriculture techniques.</p>
-                </article>
-
-                <article class="additional-card">
-                    <span class="coming-soon-mini">Coming Soon</span>
-                    <div class="additional-icon" aria-hidden="true"><i class="fas fa-bug"></i></div>
-                    <h3>Integrated Pest Management</h3>
-                    <p>Advanced IPM solutions using traps, scouting, early detection systems, and minimal chemical
-                        intervention.</p>
-                </article>
-
-                <article class="additional-card">
-                    <span class="coming-soon-mini">Coming Soon</span>
-                    <div class="additional-icon" aria-hidden="true"><i class="fas fa-warehouse"></i></div>
-                    <h3>Post-Harvest Services</h3>
-                    <p>Professional storage, handling, and logistics support to maintain produce quality from harvest to
-                        delivery.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="process-section" aria-labelledby="process-heading">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">How It Works</span>
-                <h2 id="process-heading">Our Service Process</h2>
-                <p>Simple steps to partner with SHEBE FARMS</p>
-            </div>
-
-            <div class="process-grid">
-                <article class="process-step">
-                    <div class="step-number">1</div>
-                    <div class="step-icon" aria-hidden="true"><i class="fas fa-phone-alt"></i></div>
-                    <h3>Initial Contact</h3>
-                    <p>Reach out to us via phone, email, or our contact form to discuss your needs.</p>
-                </article>
-
-                <div class="process-arrow" aria-hidden="true">→</div>
-
-                <article class="process-step">
-                    <div class="step-number">2</div>
-                    <div class="step-icon" aria-hidden="true"><i class="fas fa-clipboard-list"></i></div>
-                    <h3>Consultation</h3>
-                    <p>We assess your requirements and provide tailored recommendations.</p>
-                </article>
-
-                <div class="process-arrow" aria-hidden="true">→</div>
-
-                <article class="process-step">
-                    <div class="step-number">3</div>
-                    <div class="step-icon" aria-hidden="true"><i class="fas fa-file-invoice-dollar"></i></div>
-                    <h3>Proposal</h3>
-                    <p>Receive a detailed, transparent proposal with no hidden costs.</p>
-                </article>
-
-                <div class="process-arrow" aria-hidden="true">→</div>
-
-                <article class="process-step">
-                    <div class="step-number">4</div>
-                    <div class="step-icon" aria-hidden="true"><i class="fas fa-handshake"></i></div>
-                    <h3>Partnership</h3>
-                    <p>We establish a collaboration that meets your agricultural goals.</p>
-                </article>
-
-                <div class="process-arrow" aria-hidden="true">→</div>
-
-                <article class="process-step">
-                    <div class="step-number">5</div>
-                    <div class="step-icon" aria-hidden="true"><i class="fas fa-check-circle"></i></div>
-                    <h3>Ongoing Support</h3>
-                    <p>We ensure satisfaction and provide continuous support as needed.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Philosophy -->
-    <section class="pricing-section" aria-labelledby="pricing-heading">
-        <div class="container">
-            <div class="pricing-content">
-                <span class="section-label">Our Commitment</span>
-                <h2 id="pricing-heading">Partnership Opportunities</h2>
-                <p>Whether you are a distributor, wholesaler, retailer, investor, or agricultural partner, SHEBE Farms
-                    welcomes collaboration. We offer flexible partnership models tailored to your business needs and
-                    goals.</p>
-
-                <div class="pricing-features">
-                    <article class="pricing-feature">
-                        <div class="feature-icon" aria-hidden="true"><i class="fas fa-gem"></i></div>
-                        <h3>Quality Assurance</h3>
-                        <p>Consistent premium quality</p>
+                <div class="additional-grid">
+                    <article class="additional-card">
+                        <span class="coming-soon-mini">Coming Soon</span>
+                        <div class="additional-icon" aria-hidden="true"><i class="fas fa-flask"></i></div>
+                        <h3>Soil Testing & Analysis</h3>
+                        <p>Comprehensive soil health assessment using advanced testing methods to determine optimal crop
+                            selection and fertilization strategies.</p>
                     </article>
-                    <article class="pricing-feature">
-                        <div class="feature-icon" aria-hidden="true"><i class="fas fa-chart-line"></i></div>
-                        <h3>Reliable Supply</h3>
-                        <p>Year-round availability</p>
+
+                    <article class="additional-card">
+                        <span class="coming-soon-mini">Coming Soon</span>
+                        <div class="additional-icon" aria-hidden="true"><i class="fas fa-tint"></i></div>
+                        <h3>Irrigation Solutions</h3>
+                        <p>Design, installation, and management of efficient drip irrigation systems for water
+                            conservation
+                            and optimal crop hydration.</p>
                     </article>
-                    <article class="pricing-feature">
-                        <div class="feature-icon" aria-hidden="true"><i class="fas fa-balance-scale"></i></div>
-                        <h3>Fair Pricing</h3>
-                        <p>Competitive market rates</p>
+
+                    <article class="additional-card">
+                        <span class="coming-soon-mini">Coming Soon</span>
+                        <div class="additional-icon" aria-hidden="true"><i class="fas fa-seedling"></i></div>
+                        <h3>Sustainable Farming</h3>
+                        <p>Specialized services for implementing sustainable and regenerative farming practices that
+                            protect
+                            and enhance soil health.</p>
                     </article>
-                    <article class="pricing-feature">
-                        <div class="feature-icon" aria-hidden="true"><i class="fas fa-handshake"></i></div>
-                        <h3>Transparent Practices</h3>
-                        <p>Full traceability</p>
+
+                    <article class="additional-card">
+                        <span class="coming-soon-mini">Coming Soon</span>
+                        <div class="additional-icon" aria-hidden="true"><i class="fas fa-chart-bar"></i></div>
+                        <h3>Yield Optimization</h3>
+                        <p>Data-driven strategies to maximize crop productivity and quality output using precision
+                            agriculture techniques.</p>
+                    </article>
+
+                    <article class="additional-card">
+                        <span class="coming-soon-mini">Coming Soon</span>
+                        <div class="additional-icon" aria-hidden="true"><i class="fas fa-bug"></i></div>
+                        <h3>Integrated Pest Management</h3>
+                        <p>Advanced IPM solutions using traps, scouting, early detection systems, and minimal chemical
+                            intervention.</p>
+                    </article>
+
+                    <article class="additional-card">
+                        <span class="coming-soon-mini">Coming Soon</span>
+                        <div class="additional-icon" aria-hidden="true"><i class="fas fa-warehouse"></i></div>
+                        <h3>Post-Harvest Services</h3>
+                        <p>Professional storage, handling, and logistics support to maintain produce quality from
+                            harvest to
+                            delivery.</p>
                     </article>
                 </div>
-
-                <a href="contact.html" class="btn btn-primary" aria-label="Partner with SHEBE FARMS">Partner With Us</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section" aria-labelledby="cta-heading">
-        <div class="container">
-            <div class="cta-content">
-                <h2 id="cta-heading">Interested in Our Services?</h2>
-                <p>Contact us today to learn more about our agricultural services and partnership opportunities!</p>
-                <div class="cta-buttons">
-                    <a href="contact.html" class="btn btn-light">Contact Us Now</a>
-                    <a href="about.html" class="btn btn-secondary">Learn More About Us</a>
+        <!-- Process Section -->
+        <section class="process-section" aria-labelledby="process-heading">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">How It Works</span>
+                    <h2 id="process-heading">Our Service Process</h2>
+                    <p>Simple steps to partner with SHEBE FARMS</p>
+                </div>
+
+                <div class="process-grid">
+                    <article class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-icon" aria-hidden="true"><i class="fas fa-phone-alt"></i></div>
+                        <h3>Initial Contact</h3>
+                        <p>Reach out to us via phone, email, or our contact form to discuss your needs.</p>
+                    </article>
+
+                    <div class="process-arrow" aria-hidden="true">→</div>
+
+                    <article class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-icon" aria-hidden="true"><i class="fas fa-clipboard-list"></i></div>
+                        <h3>Consultation</h3>
+                        <p>We assess your requirements and provide tailored recommendations.</p>
+                    </article>
+
+                    <div class="process-arrow" aria-hidden="true">→</div>
+
+                    <article class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-icon" aria-hidden="true"><i class="fas fa-file-invoice-dollar"></i></div>
+                        <h3>Proposal</h3>
+                        <p>Receive a detailed, transparent proposal with no hidden costs.</p>
+                    </article>
+
+                    <div class="process-arrow" aria-hidden="true">→</div>
+
+                    <article class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-icon" aria-hidden="true"><i class="fas fa-handshake"></i></div>
+                        <h3>Partnership</h3>
+                        <p>We establish a collaboration that meets your agricultural goals.</p>
+                    </article>
+
+                    <div class="process-arrow" aria-hidden="true">→</div>
+
+                    <article class="process-step">
+                        <div class="step-number">5</div>
+                        <div class="step-icon" aria-hidden="true"><i class="fas fa-check-circle"></i></div>
+                        <h3>Ongoing Support</h3>
+                        <p>We ensure satisfaction and provide continuous support as needed.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <!-- Pricing Philosophy -->
+        <section class="pricing-section" aria-labelledby="pricing-heading">
+            <div class="container">
+                <div class="pricing-content">
+                    <span class="section-label">Our Commitment</span>
+                    <h2 id="pricing-heading">Partnership Opportunities</h2>
+                    <p>Whether you are a distributor, wholesaler, retailer, investor, or agricultural partner, SHEBE
+                        Farms
+                        welcomes collaboration. We offer flexible partnership models tailored to your business needs and
+                        goals.</p>
+
+                    <div class="pricing-features">
+                        <article class="pricing-feature">
+                            <div class="feature-icon" aria-hidden="true"><i class="fas fa-gem"></i></div>
+                            <h3>Quality Assurance</h3>
+                            <p>Consistent premium quality</p>
+                        </article>
+                        <article class="pricing-feature">
+                            <div class="feature-icon" aria-hidden="true"><i class="fas fa-chart-line"></i></div>
+                            <h3>Reliable Supply</h3>
+                            <p>Year-round availability</p>
+                        </article>
+                        <article class="pricing-feature">
+                            <div class="feature-icon" aria-hidden="true"><i class="fas fa-balance-scale"></i></div>
+                            <h3>Fair Pricing</h3>
+                            <p>Competitive market rates</p>
+                        </article>
+                        <article class="pricing-feature">
+                            <div class="feature-icon" aria-hidden="true"><i class="fas fa-handshake"></i></div>
+                            <h3>Transparent Practices</h3>
+                            <p>Full traceability</p>
+                        </article>
+                    </div>
+
+                    <a href="contact.html" class="btn btn-primary" aria-label="Partner with SHEBE FARMS">Partner With
+                        Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" aria-labelledby="cta-heading">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 id="cta-heading">Interested in Our Services?</h2>
+                    <p>Contact us today to learn more about our agricultural services and partnership opportunities!</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-light">Contact Us Now</a>
+                        <a href="about.html" class="btn btn-secondary">Learn More About Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <img src="images/logo.png" alt="SHEBE FARMS" class="footer-logo" width="80" height="80">
+                    <img src="images/logo.png" alt="SHEBE FARMS" class="footer-logo" width="120" height="100"
+                        loading="lazy">
                     <p>Growing better food using smarter systems. Nigeria's leading model of modern, data-driven
                         agriculture.</p>
                 </div>
 
                 <nav class="footer-col" aria-label="Footer navigation">
-                    <h4>Quick Links</h4>
+                    <h3>Quick Links</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
@@ -496,7 +440,7 @@
                 </nav>
 
                 <div class="footer-col">
-                    <h4>Follow Us</h4>
+                    <h3>Follow Us</h3>
                     <ul>
                         <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook"><i
                                     class="fab fa-facebook" aria-hidden="true"></i> Facebook</a></li>
@@ -514,7 +458,7 @@
                 </div>
 
                 <div class="footer-col">
-                    <h4>Contact Info</h4>
+                    <h3>Contact Info</h3>
                     <address class="contact-info">
                         <ul>
                             <li><i class="fas fa-phone"></i> <a href="tel:+2348135308144">+2348135308144</a></li>
@@ -533,6 +477,28 @@
     </footer>
 
     <script src="scripts/services.js"></script>
+
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "YOUR_PROJECT_ID");
+    </script>
+</body>
+
+</html>
 </body>
 
 </html>

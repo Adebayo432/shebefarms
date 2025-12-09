@@ -1,6 +1,3 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap');
-
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -9,13 +6,13 @@
 }
 
 :root {
-    --cherry-red: #2c4c3b;
+    --cherry-red: #1a3324;
     --light-green: #c07f5e;
     --dark-green: #e3c188;
-    --medium-green: #f4f0e6;
+    --medium-green: #e8dfc8;
     --cream: #534e38;
     --text-dark: #728d83;
-    --text-light: rgb(28, 219, 28);
+    --text-light: rgb(20, 185, 20);
 }
 
 body {
@@ -336,7 +333,7 @@ p {
     }
 }
 
-.mv-card h3 {
+.mv-card h2 {
     font-size: 2rem;
     color: var(--text-light);
     margin-bottom: 1.5rem;
@@ -434,7 +431,7 @@ p {
     }
 }
 
-.value-card h4 {
+.value-card h3 {
     font-size: 1.5rem;
     color: var(--text-light);
     margin-bottom: 1rem;
@@ -503,7 +500,7 @@ p {
     min-width: 60px;
 }
 
-.why-text h4 {
+.why-text h3 {
     font-size: 1.3rem;
     color: var(--text-light);
     margin-bottom: 0.5rem;
@@ -612,7 +609,7 @@ p {
     transform: translateX(10px);
 }
 
-.timeline-content h4 {
+.timeline-content h3 {
     font-size: 1.5rem;
     color: var(--text-light);
     margin-bottom: 0.8rem;
@@ -788,7 +785,8 @@ p {
     margin-bottom: 2rem;
 }
 
-.footer-col h4 {
+.footer-col h3 {
+    /* was h4 */
     color: var(--medium-green);
     margin-bottom: 1rem;
     font-size: 1.3rem;
