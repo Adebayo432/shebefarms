@@ -6,13 +6,13 @@
 }
 
 :root {
-    --cherry-red: #1a3324;
+    --cherry-red: #2c4c3b;
     --light-green: #c07f5e;
     --dark-green: #e3c188;
-    --medium-green: #e8dfc8;
+    --medium-green: #f4f0e6;
     --cream: #534e38;
     --text-dark: #728d83;
-    --text-light: rgb(20, 185, 20);
+    --text-light: rgb(28, 219, 28);
 }
 
 body {
@@ -78,7 +78,7 @@ p {
     gap: 15px;
 }
 
-.logo-container A {
+.logo-container a {
     text-decoration: none;
 }
 
@@ -137,9 +137,9 @@ p {
 .menu-toggle {
     display: none;
     flex-direction: column;
-    background-color: transparent;
-
+    border: none;
     cursor: pointer;
+    background-color: transparent;
     gap: 2px;
 }
 
@@ -872,6 +872,7 @@ p {
 }
 
 /* Responsive Design */
+/* Responsive Design */
 @media (max-width: 968px) {
     .nav-menu {
         position: fixed;
@@ -888,6 +889,7 @@ p {
         padding: 0.5rem 0;
         gap: 0;
     }
+
 
     .nav-menu.active {
         left: 0;

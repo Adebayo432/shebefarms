@@ -6,14 +6,15 @@
 }
 
 :root {
-    --cherry-red: #1a3324;
+    --cherry-red: #2c4c3b;
     --light-green: #c07f5e;
     --dark-green: #e3c188;
-    --medium-green: #e8dfc8;
+    --medium-green: #f4f0e6;
     --cream: #534e38;
     --text-dark: #728d83;
-    --text-light: rgb(20, 185, 20);
+    --text-light: rgb(28, 219, 28);
 }
+
 
 
 body {
