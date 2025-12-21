@@ -12,7 +12,7 @@
     --medium-green: #f4f0e6;
     --cream: #534e38;
     --text-dark: #728d83;
-    --text-light: rgb(28, 219, 28);
+    --text-light: rgb(24, 183, 24);
 }
 
 body {
@@ -513,13 +513,22 @@ p {
 }
 
 .feature-list li::before {
-    content: '\f00c';
+    /* content: '\f00c'; */
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     position: absolute;
     left: 0;
     color: var(--cherry-red);
     font-size: 1.3rem;
+}
+
+.feature-list li p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    margin-left: 2rem;
+    color: var(--text-dark);
+    margin-top: 0.3rem;
 }
 
 /* Services Preview Section */
