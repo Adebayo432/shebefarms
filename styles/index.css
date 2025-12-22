@@ -693,7 +693,7 @@ p {
 }
 
 .footer-col ul li a {
-    color: var(--text-light);
+    color: var(--dark-green);
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-block;
@@ -701,7 +701,7 @@ p {
 
 .footer-col ul li a:hover {
     color: var(--cherry-red);
-    padding-left: 5px;
+
 }
 
 .footer-logo {
@@ -712,6 +712,17 @@ p {
 .footer-col p {
 
     line-height: 1.8;
+}
+
+.follow-us {
+    display: flex;
+    gap: 1rem;
+}
+
+.follow-us li a {
+    color: var(--dark-green);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
 }
 
 .contact-info li {
