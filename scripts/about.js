@@ -79,12 +79,13 @@ timelineMarkers.forEach(marker => {
     markerObserver.observe(marker);
 });
 
-// Parallax effect for page hero
+// Parallax effect for page hero (match index page behavior)
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroContent = document.querySelector('.hero-content');
     if (heroContent) {
-        heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+        heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
+        heroContent.style.opacity = 1 - (scrolled / 800);
     }
 });
 
