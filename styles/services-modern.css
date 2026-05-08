@@ -1,0 +1,136 @@
+main section {
+    padding: 4rem 0;
+}
+
+.intro-content,
+.section-header,
+.pricing-content,
+.cta-content {
+    text-align: center;
+}
+
+.service-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+
+.service-content,
+.additional-card,
+.process-step,
+.pricing-feature,
+.cta-content {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    padding: 1.2rem;
+    transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.service-content:hover,
+.additional-card:hover,
+.process-step:hover,
+.pricing-feature:hover,
+.cta-content:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.service-number {
+    font-weight: 700;
+    color: var(--brand-700);
+}
+
+.coming-soon-badge,
+.coming-soon-mini {
+    display: inline-block;
+    border-radius: 999px;
+    background: #eef5f1;
+    color: var(--brand-700);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.6rem;
+    margin-bottom: 0.7rem;
+    animation: pulseTag 2.8s ease-in-out infinite;
+}
+
+.service-features {
+    margin-top: 0.8rem;
+    padding-left: 1rem;
+}
+
+.service-features li {
+    margin-bottom: 0.4rem;
+}
+
+.service-image {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.service-image:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.service-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.24s ease;
+}
+
+.service-image:hover img {
+    transform: scale(1.02);
+}
+
+.additional-grid,
+.pricing-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0.7rem;
+    align-items: stretch;
+}
+
+.process-arrow {
+    display: none;
+}
+
+.cta-section {
+    background: #f8fbf9;
+}
+
+.cta-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.7rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@keyframes pulseTag {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+}
+
+@media (max-width: 980px) {
+    .service-block,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+}

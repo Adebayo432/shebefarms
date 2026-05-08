@@ -28,17 +28,98 @@
         content="Contact SHEBE FARMS for commercial crop supply, distribution partnerships, and investment opportunities.">
     <meta property="twitter:image" content="https://www.shebefarms.com/images/shebe-logo.png">
 
+    <meta name="twitter:site" content="@shebefarms">
+    <meta name="twitter:creator" content="@shebefarms">
+
     <!-- Social Media Links -->
+    <meta property="og:see_also" content="https://www.facebook.com/shebefarms">
     <meta property="og:see_also" content="https://www.instagram.com/shebefarms">
     <meta property="og:see_also" content="https://youtube.com/@shebefarms">
     <meta property="og:see_also" content="https://www.tiktok.com/@shebefarms">
+    <link rel="me" href="https://www.facebook.com/shebefarms">
     <link rel="me" href="https://www.instagram.com/shebefarms">
     <link rel="me" href="https://youtube.com/@shebefarms">
     <link rel="me" href="https://www.tiktok.com/@shebefarms">
-    <link rel="stylesheet" href="styles/contact.css">
+    <style>
+        /* Minimal critical CSS to avoid hero FOUC while the main stylesheet loads */
+        .hero,
+        .page-hero {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 60px;
+        }
+        .hero {
+            height: 60vh;
+        }
+        .page-hero {
+            height: 50vh;
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+        }
+        .hero-slideshow {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            pointer-events: none;
+        }
+        .hero-slide.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .hero-slide-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .hero::before,
+            .page-hero::before {
+                animation: none !important;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+    <link rel="preload" as="image" href="images/landcape-image.jpg">
+    <link rel="stylesheet" href="styles/shared.css">
+    <link rel="stylesheet" href="styles/contact-modern.css">
+    <noscript>
+        <link rel="stylesheet" href="styles/shared.css">
+        <link rel="stylesheet" href="styles/contact-modern.css">
+    </noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         media="print" onload="this.media='all'">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </noscript>
     <link rel="icon" href="images/shebe logo.png" type="image/x-icon" />
 </head>
 
@@ -48,17 +129,17 @@
         <div class="nav-container">
             <div class="logo-container">
                 <a href="index.html" class="active">
-                    <img src="images/shebe logo.png" alt="SHEBE FARMS Logo" class="logo" width="50" height="50">
+                    <img src="images/shebe logo.png" alt="SHEBE FARMS Logo" class="logo" width="50" height="50" loading="lazy" decoding="async" srcset="images/shebe logo.png 50w, images/shebe logo.png 100w, images/shebe logo.png 150w" sizes="50px">
                     <!-- <span class="logo-text">SHEBE
                         FARMS</span> -->
                 </a>
             </div>
 
-            <div class="menu-toggle" id="menuToggle">
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
 
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html">Home</a></li>
@@ -72,8 +153,10 @@
 
         <!-- Hero Banner -->
         <section class="page-hero">
-            <div class="hero-overlay"><img src="images/landcape-image.jpg" class="hero-overlay-img" alt="" width="1920"
-                    height="1080" loading="eager"></div>
+            <div class="hero-overlay"><img src="images/landcape-image.jpg" class="hero-overlay-img" alt="SHEBE FARMS landscape" width="1920"
+                    height="1080" loading="eager" decoding="async" fetchpriority="high"
+                    srcset="images/landcape-image.jpg 640w, images/landcape-image.jpg 1280w, images/landcape-image.jpg 1920w"
+                    sizes="100vw"></div>
             <div class="hero-content">
                 <h1>Get In Touch</h1>
                 <p>Let's Grow Together</p>
@@ -96,15 +179,15 @@
 
 
                     <div class="info-card">
-                        <div class="card-icon"> <a href="tel:+2348135308144"><i class="fas fa-phone"></i></a></div>
+                        <div class="card-icon"> <a href="tel:+2348135308144" aria-label="Call SHEBE FARMS"><i class="fas fa-phone" aria-hidden="true"></i></a></div>
                         <h3>Call Us</h3>
                         <p> <a href="tel:+2348135308144">+2348135308144</a></p>
                     </div>
 
                     <div class="info-card">
                         <div class="card-icon"><a
-                                href="/cdn-cgi/l/email-protection#91f2feffe5f0f2e5d1e2f9f4f3f4f7f0e3fce2bff2fefc"><i
-                                    class="fas fa-envelope"></i></a>
+                                href="/cdn-cgi/l/email-protection#91f2feffe5f0f2e5d1e2f9f4f3f4f7f0e3fce2bff2fefc" aria-label="Email SHEBE FARMS"><i
+                                    class="fas fa-envelope" aria-hidden="true"></i></a>
                         </div>
                         <h3>Email Us</h3>
                         <p> <a href="mailto:contact@shebefarms.com">contact@shebefarms.com</a>
@@ -114,7 +197,7 @@
                     <div class="info-card">
                         <div class="card-icon"><a
                                 href="https://wa.me/2348135308144?text=Hi%2C%20I%20messaged%20you%20from%20your%20website"
-                                target="_blank"><i class="fab fa-whatsapp"></i></a></div>
+                                target="_blank" aria-label="Chat on WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></div>
                         <h3>WhatsApp</h3>
                         <p><a href="https://wa.me/2348135308144?text=Hi%2C%20I%20messaged%20you%20from%20your%20website"
                                 target="_blank">Chat with Us</a></p>
@@ -148,9 +231,6 @@
                         </div>
 
                         <div class="contact-image">
-                            <!-- <div class="image-placeholder">
-                                <img src="images/landcape-image.jpg" alt="" class="image-placeholder">
-                            </div> -->
                         </div>
                     </div>
 
@@ -219,31 +299,51 @@
         </section>
 
         <div class="social-section">
-            <h2>Follow Us on Social Media</h2>
-            <p>Stay connected and get the latest updates about our farm</p>
-            <ul class="follow-us">
-                <li>
-                    <a href="#" target="_blank" rel="noopener" aria-label="Facebook">
-                        <i class="fab fa-facebook"></i>
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Stay Connected</span>
+                    <h2>Follow Us on Social Media</h2>
+                    <p>Stay connected and get the latest updates about our farm</p>
+                </div>
+                <div class="social-grid">
+                    <a href="#" target="_blank" rel="noopener" aria-label="Facebook" class="social-card">
+                        <div class="social-icon">
+                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                        </div>
+                        <div class="social-content">
+                            <h3>Facebook</h3>
+                            <p>Follow our journey</p>
+                        </div>
                     </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/shebefarms" target="_blank" rel="noopener"
-                        aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
+                    <a href="https://www.instagram.com/shebefarms" target="_blank" rel="noopener" aria-label="Instagram" class="social-card">
+                        <div class="social-icon">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </div>
+                        <div class="social-content">
+                            <h3>Instagram</h3>
+                            <p>Daily farm life</p>
+                        </div>
                     </a>
-                </li>
-                <li>
-                    <a href="https://youtube.com/@shebefarms" target="_blank" rel="noopener" aria-label="YouTube">
-                        <i class="fab fa-youtube"></i>
+                    <a href="https://youtube.com/@shebefarms" target="_blank" rel="noopener" aria-label="YouTube" class="social-card">
+                        <div class="social-icon">
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        </div>
+                        <div class="social-content">
+                            <h3>YouTube</h3>
+                            <p>Farm tutorials</p>
+                        </div>
                     </a>
-                </li>
-                <li>
-                    <a href="https://www.tiktok.com/@shebefarms" target="_blank" rel="noopener" aria-label="TikTok">
-                        <i class="fab fa-tiktok"></i>
+                    <a href="https://www.tiktok.com/@shebefarms" target="_blank" rel="noopener" aria-label="TikTok" class="social-card">
+                        <div class="social-icon">
+                            <i class="fab fa-tiktok" aria-hidden="true"></i>
+                        </div>
+                        <div class="social-content">
+                            <h3>TikTok</h3>
+                            <p>Quick farm tips</p>
+                        </div>
                     </a>
-                </li>
-            </ul>
+                </div>
+            </div>
         </div>
 
         <!-- Map Section -->
@@ -276,10 +376,10 @@
 
                 <div class="faq-container">
                     <div class="faq-item">
-                        <div class="faq-question">
+                        <button class="faq-question" type="button" aria-expanded="false">
                             <h4>What types of partnerships does SHEBE Farms offer?</h4>
-                            <span class="faq-toggle">+</span>
-                        </div>
+                            <span class="faq-toggle" aria-hidden="true">+</span>
+                        </button>
                         <div class="faq-answer">
                             <p>We welcome distributors, wholesalers, retailers, investors, and agricultural partners.
                                 Contact us to discuss how we can collaborate based on your specific interests and goals.
@@ -288,10 +388,10 @@
                     </div>
 
                     <div class="faq-item">
-                        <div class="faq-question">
+                        <button class="faq-question" type="button" aria-expanded="false">
                             <h4>Can I visit the farm?</h4>
-                            <span class="faq-toggle">+</span>
-                        </div>
+                            <span class="faq-toggle" aria-hidden="true">+</span>
+                        </button>
                         <div class="faq-answer">
                             <p>Yes! We welcome farm visits. Please schedule in advance through our contact form or by
                                 calling us directly so we can arrange a comprehensive tour of our facilities.</p>
@@ -299,10 +399,10 @@
                     </div>
 
                     <div class="faq-item">
-                        <div class="faq-question">
+                        <button class="faq-question" type="button" aria-expanded="false">
                             <h4>What is your production capacity?</h4>
-                            <span class="faq-toggle">+</span>
-                        </div>
+                            <span class="faq-toggle" aria-hidden="true">+</span>
+                        </button>
                         <div class="faq-answer">
                             <p>We operate on 50 hectares with year-round production capacity using both greenhouse and
                                 open-field cultivation. Contact us for specific volume and supply agreement discussions.
@@ -311,10 +411,10 @@
                     </div>
 
                     <div class="faq-item">
-                        <div class="faq-question">
+                        <button class="faq-question" type="button" aria-expanded="false">
                             <h4>How do you ensure quality?</h4>
-                            <span class="faq-toggle">+</span>
-                        </div>
+                            <span class="faq-toggle" aria-hidden="true">+</span>
+                        </button>
                         <div class="faq-answer">
                             <p>We use precision agriculture techniques, sensor-based monitoring, data-driven decisions,
                                 and
@@ -325,10 +425,10 @@
                     </div>
 
                     <div class="faq-item">
-                        <div class="faq-question">
+                        <button class="faq-question" type="button" aria-expanded="false">
                             <h4>What makes SHEBE Farms different?</h4>
-                            <span class="faq-toggle">+</span>
-                        </div>
+                            <span class="faq-toggle" aria-hidden="true">+</span>
+                        </button>
                         <div class="faq-answer">
                             <p>We combine modern technology with sustainable practices. Our data-driven approach, smart
                                 farming technology, and commitment to quality set us apart as Nigeria's leading model of
@@ -337,10 +437,10 @@
                     </div>
 
                     <div class="faq-item">
-                        <div class="faq-question">
+                        <button class="faq-question" type="button" aria-expanded="false">
                             <h4>How quickly can you respond to inquiries?</h4>
-                            <span class="faq-toggle">+</span>
-                        </div>
+                            <span class="faq-toggle" aria-hidden="true">+</span>
+                        </button>
                         <div class="faq-answer">
                             <p>We typically respond to all inquiries within 24-48 hours. For urgent matters, please call
                                 us
@@ -370,7 +470,10 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <img src="images/logo.png" alt="SHEBE FARMS Logo" class="footer-logo" width="80" height="80">
+                    <img src="images/logo.png" alt="SHEBE FARMS Logo" class="footer-logo" width="80" height="80"
+                        loading="lazy" decoding="async"
+                        srcset="images/logo.png 60w, images/logo.png 80w, images/logo.png 120w"
+                        sizes="(max-width: 768px) 60px, 80px">
                     <p>Growing better food using smarter systems. Nigeria's leading model of modern, data-driven
                         agriculture.</p>
                 </div>
@@ -388,13 +491,13 @@
                 <div class="footer-col">
                     <h3>Follow Us</h3>
                     <ul class="follow-us">
-                        <li><a href="#" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> </a></li>
-                        <li><a href="https://www.instagram.com/shebefarms" target="_blank" rel="noopener"><i
-                                    class="fab fa-instagram"></i></a></li>
-                        <li><a href="https://youtube.com/@shebefarms" target="_blank" rel="noopener"><i
-                                    class="fab fa-youtube"></i> </a></li>
-                        <li><a href="https://www.tiktok.com/@shebefarms" target="_blank" rel="noopener"><i
-                                    class="fab fa-tiktok"></i></a></li>
+                        <li><a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i> </a></li>
+                        <li><a href="https://www.instagram.com/shebefarms" target="_blank" rel="noopener" aria-label="Instagram"><i
+                                    class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://youtube.com/@shebefarms" target="_blank" rel="noopener" aria-label="YouTube"><i
+                                    class="fab fa-youtube" aria-hidden="true"></i> </a></li>
+                        <li><a href="https://www.tiktok.com/@shebefarms" target="_blank" rel="noopener" aria-label="TikTok"><i
+                                    class="fab fa-tiktok" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
 
@@ -413,13 +516,14 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 SHEBE FARMS. All rights reserved.</p>
+                <p>&copy; 2026 SHEBE FARMS. All rights reserved.</p>
             </div>
         </div>
     </footer>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="scripts/hero-slideshow.js" defer></script>
-    <script src="scripts/contact.js"></script>
+    <script src="scripts/shared.js" defer></script>
+    <script src="scripts/contact-modern.js" defer></script>
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -438,9 +542,4 @@
             y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script",);
     </script>
-</body>
-
-</html>
-</body>
-
 </html>

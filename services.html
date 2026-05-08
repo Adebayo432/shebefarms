@@ -32,16 +32,102 @@
         content="Commercial crop production, smart farming technology, and precision agriculture services.">
     <meta property="twitter:image" content="https://www.shebefarms.com/images/shebe-logo.png">
 
+    <!-- Social Media Links -->
+    <meta property="og:see_also" content="https://www.facebook.com/shebefarms">
+    <meta property="og:see_also" content="https://www.instagram.com/shebefarms">
+    <meta property="og:see_also" content="https://youtube.com/@shebefarms">
+    <meta property="og:see_also" content="https://www.tiktok.com/@shebefarms">
+    <link rel="me" href="https://www.facebook.com/shebefarms">
+    <link rel="me" href="https://www.instagram.com/shebefarms">
+    <link rel="me" href="https://youtube.com/@shebefarms">
+    <link rel="me" href="https://www.tiktok.com/@shebefarms">
+
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/services.css">
+    <style>
+        /* Minimal critical CSS to avoid hero FOUC while the main stylesheet loads */
+        .hero,
+        .page-hero {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 60px;
+        }
+        .hero {
+            height: 60vh;
+        }
+        .page-hero {
+            height: 50vh;
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+        }
+        .hero-slideshow {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+            pointer-events: none;
+        }
+        .hero-slide.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .hero-slide-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .hero::before,
+            .page-hero::before {
+                animation: none !important;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+    <link rel="preload" as="image" href="images/landcape-image.jpg">
+    <link rel="stylesheet" href="styles/shared.css">
+    <link rel="stylesheet" href="styles/services-modern.css">
+    <noscript>
+        <link rel="stylesheet" href="styles/shared.css">
+        <link rel="stylesheet" href="styles/services-modern.css">
+    </noscript>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         media="print" onload="this.media='all'">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </noscript>
     <!-- Favicons -->
     <link rel="icon" href="images/shebe logo.png" type="image/png">
 
@@ -54,9 +140,12 @@
         <div class="nav-container">
             <div class="logo-container">
                 <a href="index.html" aria-label="SHEBE FARMS Home">
-                    <img src="images/shebe logo.png" alt="SHEBE FARMS Logo" class="logo" width="50" height="50">
+                    <img src="images/shebe logo.png" alt="SHEBE FARMS Logo" class="logo" width="50" height="50"
+                        loading="lazy" decoding="async"
+                        srcset="images/shebe logo.png 50w, images/shebe logo.png 100w, images/shebe logo.png 150w"
+                        sizes="50px">
 
-                    <span class="logo-text">SHEBE FARMS</span>
+                    <!-- <span class="logo-text">SHEBE FARMS</span> -->
                 </a>
             </div>
 
@@ -78,8 +167,10 @@
     <main>
         <!-- Hero Banner -->
         <header class="page-hero">
-            <div class="hero-overlay"><img src="images/landcape-image.jpg" class="hero-overlay-img" alt="" width="1920"
-                    height="1080" loading="eager"></div>
+            <div class="hero-overlay"><img src="images/landcape-image.jpg" class="hero-overlay-img" alt="SHEBE FARMS landscape" width="1920"
+                    height="1080" loading="eager" decoding="async" fetchpriority="high"
+                    srcset="images/landcape-image.jpg 640w, images/landcape-image.jpg 1280w, images/landcape-image.jpg 1920w"
+                    sizes="100vw"></div>
             <div class="hero-content">
                 <h1>Our Services</h1>
                 <p>Comprehensive Agricultural Solutions for Modern Farming</p>
@@ -125,7 +216,9 @@
                     </div>
                     <div class="service-image">
                         <img src="images/Commercial Tomato Production.webp" alt="Smart farming equipment and technology"
-                            class="image-placeholder" width="600" height="400" loading="lazy">
+                            class="image-placeholder" width="600" height="400" loading="lazy" decoding="async"
+                            srcset="images/Commercial%20Tomato%20Production.webp 480w, images/Commercial%20Tomato%20Production.webp 600w, images/Commercial%20Tomato%20Production.webp 1000w"
+                            sizes="(max-width: 768px) 90vw, 600px">
                     </div>
 
 
@@ -152,7 +245,9 @@
                     </div>
                     <div class="service-image">
                         <img src="images/Drone.webp" alt="Smart farming equipment and technology"
-                            class="image-placeholder" width="600" height="400" loading="lazy">
+                            class="image-placeholder" width="600" height="400" loading="lazy" decoding="async"
+                            srcset="images/Drone.webp 480w, images/Drone.webp 600w, images/Drone.webp 1000w"
+                            sizes="(max-width: 768px) 90vw, 600px">
                     </div>
                 </article>
             </div>
@@ -161,10 +256,7 @@
         <section class="main-services alt" id="equipment" aria-labelledby="tech-heading">
             <div class="container">
                 <article class="service-block reverse">
-                    <div class="service-image">
-                        <img src="images/Smart Farming Technology.webp" alt="Smart farming equipment and technology"
-                            class="image-placeholder" width="600" height="400" loading="lazy">
-                    </div>
+
                     <div class="service-content">
                         <span class="service-number">03</span> <br>
                         <span class="coming-soon-badge">Coming Soon</span>
@@ -181,6 +273,12 @@
                         </ul>
                         <!-- <button class="btn btn-primary btn-coming-soon" disabled
                         aria-label="Smart farming technology service coming soon">Coming Soon</button> -->
+                    </div>
+                    <div class="service-image">
+                        <img src="images/Smart Farming Technology.webp" alt="Smart farming equipment and technology"
+                            class="image-placeholder" width="600" height="400" loading="lazy" decoding="async"
+                            srcset="images/Smart%20Farming%20Technology.webp 480w, images/Smart%20Farming%20Technology.webp 600w, images/Smart%20Farming%20Technology.webp 1000w"
+                            sizes="(max-width: 768px) 90vw, 600px">
                     </div>
                 </article>
             </div>
@@ -209,7 +307,9 @@
                     </div>
                     <div class="service-image">
                         <img src="images/farm-instructor-image.jpg" alt="Agricultural consultation and training"
-                            class="image-placeholder" width="600" height="400" loading="lazy">
+                            class="image-placeholder" width="600" height="400" loading="lazy" decoding="async"
+                            srcset="images/farm-instructor-image.jpg 480w, images/farm-instructor-image.jpg 600w, images/farm-instructor-image.jpg 1000w"
+                            sizes="(max-width: 768px) 90vw, 600px">
                     </div>
                 </article>
             </div>
@@ -218,10 +318,7 @@
         <section class="main-services alt" id="maintenance" aria-labelledby="supply-heading">
             <div class="container">
                 <article class="service-block reverse">
-                    <div class="service-image">
-                        <img src="images/Supply Chain & Distribution.png" alt="Supply chain and distribution services"
-                            class="image-placeholder" width="600" height="400" loading="lazy">
-                    </div>
+
                     <div class="service-content">
                         <span class="service-number">05</span> <br>
                         <span class="coming-soon-badge">Coming Soon</span>
@@ -238,6 +335,13 @@
                         </ul>
                         <!-- <button class="btn btn-primary btn-coming-soon" disabled
                         aria-label="Supply chain service coming soon">Coming Soon</button> -->
+                    </div>
+                    <div class="service-image">
+                        <img src="images/Supply Chain & Distribution.png"
+                            alt="Supply chain and distribution services" class="image-placeholder" width="600"
+                            height="400" loading="lazy" decoding="async"
+                            srcset="images/Supply%20Chain%20&%20Distribution.png 480w, images/Supply%20Chain%20&%20Distribution.png 600w, images/Supply%20Chain%20&%20Distribution.png 1000w"
+                            sizes="(max-width: 768px) 90vw, 600px">
                     </div>
 
                 </article>
@@ -424,7 +528,9 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <img src="images/logo.png" alt="SHEBE FARMS" class="footer-logo" width="120" height="100"
-                        loading="lazy">
+                        loading="lazy" decoding="async"
+                        srcset="images/logo.png 80w, images/logo.png 120w, images/logo.png 160w"
+                        sizes="(max-width: 768px) 60px, 120px">
                     <p>Growing better food using smarter systems. Nigeria's leading model of modern, data-driven
                         agriculture.</p>
                 </div>
@@ -442,13 +548,13 @@
                 <div class="footer-col">
                     <h3>Follow Us</h3>
                     <ul class="follow-us">
-                        <li><a href="#" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> </a></li>
-                        <li><a href="https://www.instagram.com/shebefarms" target="_blank" rel="noopener"><i
-                                    class="fab fa-instagram"></i></a></li>
-                        <li><a href="https://youtube.com/@shebefarms" target="_blank" rel="noopener"><i
-                                    class="fab fa-youtube"></i> </a></li>
-                        <li><a href="https://www.tiktok.com/@shebefarms" target="_blank" rel="noopener"><i
-                                    class="fab fa-tiktok"></i></a></li>
+                        <li><a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i> </a></li>
+                        <li><a href="https://www.instagram.com/shebefarms" target="_blank" rel="noopener" aria-label="Instagram"><i
+                                    class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://youtube.com/@shebefarms" target="_blank" rel="noopener" aria-label="YouTube"><i
+                                    class="fab fa-youtube" aria-hidden="true"></i> </a></li>
+                        <li><a href="https://www.tiktok.com/@shebefarms" target="_blank" rel="noopener" aria-label="TikTok"><i
+                                    class="fab fa-tiktok" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
 
@@ -458,7 +564,7 @@
                         <ul>
                             <li><i class="fas fa-phone"></i> <a href="tel:+2348135308144">+2348135308144</a></li>
                             <li><i class="fas fa-envelope"></i> <a
-                                    href="mailto:contact@shebefarms.com">contact@shebefarms.com</a></li>
+                                    href="mailto:contact@shebefarms.com">contact@shebefarms.com</a>
                             <li><i class="fas fa-clock"></i> Mon - Sat: 7AM - 6PM</li>
                         </ul>
                     </address>
@@ -466,12 +572,15 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 SHEBE FARMS. All rights reserved.</p>
+                <p>&copy; 2026 SHEBE FARMS. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="scripts/services.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="scripts/hero-slideshow.js" defer></script>
+    <script src="scripts/shared.js" defer></script>
+    <script src="scripts/services-modern.js" defer></script>
 
 
     <!-- Google Analytics -->
@@ -491,9 +600,4 @@
             y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script",);
     </script>
-</body>
-
-</html>
-</body>
-
 </html>
