@@ -29,7 +29,7 @@ if (contactForm) {
         const message = encodeURIComponent(
             `New contact from website\nName: ${data.firstName} ${data.lastName}\nEmail: ${data.email}\nPhone: ${data.phone}\nSubject: ${data.subject}\n\n${data.message}`
         );
-        window.open(`https://wa.me/2348135308144?text=${message}`, "_blank");
+        window.open(`https://wa.me/2349070784389?text=${message}`, "_blank");
         showMessage("Redirecting to WhatsApp...");
     });
 }
