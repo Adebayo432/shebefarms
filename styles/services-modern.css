@@ -2,6 +2,11 @@ main section {
     padding: 4rem 0;
 }
 
+.services-intro h2,
+.intro-content h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
 .intro-content,
 .section-header,
 .pricing-content,
@@ -15,6 +20,10 @@ main section {
     gap: 1.2rem;
     margin-bottom: 1rem;
     align-items: center;
+}
+
+.service-block h2 {
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
 }
 
 .service-content,
@@ -41,6 +50,7 @@ main section {
 .service-number {
     font-weight: 700;
     color: var(--brand-700);
+    font-size: 1.4rem;
 }
 
 .coming-soon-badge,
@@ -54,6 +64,16 @@ main section {
     padding: 0.25rem 0.6rem;
     margin-bottom: 0.7rem;
     animation: pulseTag 2.8s ease-in-out infinite;
+}
+
+i, .fas, [class*="fa-"] {
+    display: inline-block;
+    animation: floatIcon 3s ease-in-out infinite;
+    font-size: 1.4em;
+}
+
+i:nth-child(2n), .fas:nth-child(2n), [class*="fa-"]:nth-child(2n) {
+    animation: floatIcon 3.2s ease-in-out infinite reverse;
 }
 
 .service-features {
@@ -125,6 +145,15 @@ main section {
     }
     50% {
         transform: scale(1.03);
+    }
+}
+
+@keyframes floatIcon {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
     }
 }
 

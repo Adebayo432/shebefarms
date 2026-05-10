@@ -7,6 +7,10 @@ main section {
     margin-bottom: 1rem;
 }
 
+.section-header h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
 .gallery-section.farm-gallery {
     background: #f8fbf9;
 }
@@ -22,6 +26,19 @@ main section {
     overflow: hidden;
     box-shadow: var(--shadow-sm);
     transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.gallery-item i, 
+.gallery-item .fas,
+.gallery-item [class*="fa-"] {
+    font-size: 3.5rem;
+    animation: floatIcon 3s ease-in-out infinite;
+}
+
+.gallery-item:nth-child(even) i,
+.gallery-item:nth-child(even) .fas,
+.gallery-item:nth-child(even) [class*="fa-"] {
+    animation: floatIcon 3.2s ease-in-out infinite reverse;
 }
 
 .gallery-item:hover {
@@ -46,6 +63,15 @@ main section {
 .image-placeholder p {
     text-transform: capitalize;
     margin-top: 0.5rem;
+}
+
+@keyframes floatIcon {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
 .cta-section {

@@ -36,9 +36,14 @@ main section,
 
 .card-icon {
     color: var(--brand-700);
-    font-size: 1.7rem;
+    font-size: 2.1rem;
     margin-bottom: 0.5rem;
     transition: transform 0.24s ease;
+    animation: floatIcon 3s ease-in-out infinite;
+}
+
+.info-card:nth-child(even) .card-icon {
+    animation: floatIcon 3.2s ease-in-out infinite reverse;
 }
 
 .info-card:hover .card-icon {
@@ -237,7 +242,7 @@ main section,
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--brand-700);
     transition: all 0.3s ease;
     flex-shrink: 0;
@@ -252,7 +257,7 @@ main section,
 .social-content h3 {
     margin: 0 0 0.25rem 0;
     font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .social-content p {
@@ -279,6 +284,15 @@ main section,
     gap: 0.7rem;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+@keyframes floatIcon {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
 }
 
 @media (max-width: 900px) {
