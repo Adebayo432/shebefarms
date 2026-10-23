@@ -146,29 +146,3 @@ if (document.readyState === "loading") {
     initScrollAnimations();
 }
 
-// Fix navbar scroll positioning on mobile
-let lastScrollY = 0;
-const navbar = document.querySelector(".navbar");
-
-if (navbar) {
-    window.addEventListener("scroll", () => {
-        // Only apply on mobile devices (under 900px)
-        if (window.innerWidth <= 900) {
-            // Always keep navbar fixed at top
-            navbar.style.position = "fixed";
-            navbar.style.top = "0";
-            navbar.style.left = "0";
-            navbar.style.right = "0";
-            navbar.style.zIndex = "1000";
-        }
-        lastScrollY = window.scrollY;
-    }, { passive: true });
-
-    // Ensure navbar stays fixed on resize
-    window.addEventListener("resize", () => {
-        if (window.innerWidth <= 900) {
-            navbar.style.position = "fixed";
-            navbar.style.top = "0";
-        }
-    });
-}

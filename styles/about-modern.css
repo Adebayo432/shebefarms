@@ -40,14 +40,14 @@ main section {
 .timeline-item,
 .cta-content {
     border-radius: var(--radius);
-    background: var(--white);
+    background: var(--surface-strong);
     box-shadow: var(--shadow-sm);
     transition: transform 0.24s ease, box-shadow 0.24s ease;
 }
 
 .value-card {
-    border: 1px solid rgba(54, 95, 73, 0.10);
-    background: linear-gradient(180deg, rgba(244, 240, 230, 0.95), rgba(255, 255, 255, 1));
+    border: 1px solid var(--line);
+    background: linear-gradient(180deg, var(--surface-soft), var(--surface-strong));
     padding: 1.5rem;
     display: grid;
     gap: 1rem;
@@ -105,8 +105,8 @@ main section {
 }
 
 .why-item {
-    border: 1px solid rgba(54, 95, 73, 0.12);
-    background: linear-gradient(180deg, rgba(244, 240, 230, 0.95), rgba(255, 255, 255, 1));
+    border: 1px solid var(--line);
+    background: linear-gradient(180deg, var(--surface-soft), var(--surface-strong));
 }
 
 .why-item:hover {
@@ -196,7 +196,7 @@ main section {
 }
 
 .cta-section {
-    background: #f8fbf9;
+    background: var(--surface-soft);
 }
 
 .cta-content {

@@ -14,7 +14,7 @@ main section,
 .why-contact,
 .faq-item,
 .cta-content {
-    background: var(--white);
+    background: var(--surface-strong);
     border-radius: var(--radius);
     box-shadow: var(--shadow-sm);
     padding: 1rem;
@@ -143,7 +143,7 @@ main section,
     overflow: hidden;
     padding: 0 1rem;
     transition: all 0.4s ease;
-    background: var(--white);
+    background: var(--surface-strong);
     border-radius: 0 0 var(--radius) var(--radius);
     margin-top: 0.5rem;
     color: var(--text-700);
@@ -184,7 +184,7 @@ main section,
 
 .social-section {
     text-align: center;
-    background: #f8fbf9;
+    background: var(--surface-soft);
     padding: 4rem 0;
 }
 
@@ -199,7 +199,7 @@ main section,
 }
 
 .social-card {
-    background: var(--white);
+    background: var(--surface-strong);
     border-radius: var(--radius);
     padding: 1.5rem;
     text-decoration: none;
@@ -227,7 +227,7 @@ main section,
 .social-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 24px rgba(54, 95, 73, 0.15);
-    color: var(--white);
+    color: var(--brand-100);
 }
 
 .social-card:hover::before {
@@ -250,7 +250,7 @@ main section,
 
 .social-card:hover .social-icon {
     background: rgba(255, 255, 255, 0.2);
-    color: var(--white);
+    color: var(--brand-100);
     transform: scale(1.1);
 }
 
@@ -267,11 +267,11 @@ main section,
 }
 
 .social-card:hover .social-content p {
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--brand-100);
 }
 
 .cta-section {
-    background: #f8fbf9;
+    background: var(--surface-soft);
 }
 
 .cta-content {

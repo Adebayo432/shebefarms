@@ -12,7 +12,7 @@ main section {
 }
 
 .gallery-section.farm-gallery {
-    background: #f8fbf9;
+    background: var(--surface-soft);
 }
 
 .gallery-grid {
@@ -75,11 +75,11 @@ main section {
 }
 
 .cta-section {
-    background: #f8fbf9;
+    background: var(--surface-soft);
 }
 
 .cta-content {
-    background: var(--white);
+    background: var(--surface-strong);
     border-radius: var(--radius);
     box-shadow: var(--shadow-sm);
     padding: 1.2rem;

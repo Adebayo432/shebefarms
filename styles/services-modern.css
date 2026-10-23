@@ -31,7 +31,7 @@ main section {
 .process-step,
 .pricing-feature,
 .cta-content {
-    background: var(--white);
+    background: var(--surface-strong);
     border-radius: var(--radius);
     box-shadow: var(--shadow-sm);
     padding: 1.2rem;
@@ -57,7 +57,7 @@ main section {
 .coming-soon-mini {
     display: inline-block;
     border-radius: 999px;
-    background: #eef5f1;
+    background: var(--surface-tint);
     color: var(--brand-700);
     font-size: 0.75rem;
     font-weight: 700;
@@ -127,7 +127,7 @@ i:nth-child(2n), .fas:nth-child(2n), [class*="fa-"]:nth-child(2n) {
 }
 
 .cta-section {
-    background: #f8fbf9;
+    background: var(--surface-soft);
 }
 
 .cta-buttons {
