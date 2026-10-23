@@ -1,12 +1,12 @@
 .hero {
-    margin-top: 72px;
-    min-height: min(82vh, 860px);
+    margin-top: 79px;
+    min-height: max(82vh, 680px);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: left;
     position: relative;
-    overflow: hidden;
+    overflow: clip;
     color: var(--white);
     padding: 4rem 0 2rem;
 }
@@ -40,7 +40,7 @@
     align-items: center;
     position: relative;
     z-index: 1;
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 
 .eyebrow {
@@ -460,8 +460,9 @@ main section {
 
 @media (max-width: 900px) {
     .hero {
+        margin-top: 79px;
         min-height: auto;
-        padding: 8rem 0 3rem;
+        padding: 3rem 0;
     }
 
     .hero-content {
@@ -483,7 +484,7 @@ main section {
 
 @media (max-width: 520px) {
     .hero {
-        padding-top: 7rem;
+        padding-top: 2rem;
     }
 
     .hero-title {
