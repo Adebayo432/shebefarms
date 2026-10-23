@@ -1,6 +1,49 @@
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 const body = document.body;
+const themeToggle = document.getElementById("themeToggle");
+
+const floatingThemeToggle = document.querySelector(".floating-theme-toggle") || (() => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "floating-theme-toggle";
+    button.setAttribute("aria-label", "Switch to dark mode");
+    button.innerHTML = "☾";
+    document.body.appendChild(button);
+    return button;
+})();
+
+const savedTheme = localStorage.getItem("shebefarms-theme") || "light";
+body.setAttribute("data-theme", savedTheme);
+
+function setTheme(theme) {
+    const nextTheme = theme === "dark" ? "dark" : "light";
+    body.setAttribute("data-theme", nextTheme);
+    localStorage.setItem("shebefarms-theme", nextTheme);
+
+    const icon = nextTheme === "dark" ? "☀" : "☾";
+
+    if (themeToggle) {
+        themeToggle.setAttribute("aria-label", nextTheme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+        themeToggle.innerHTML = icon;
+    }
+
+    if (floatingThemeToggle) {
+        floatingThemeToggle.setAttribute("aria-label", nextTheme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+        floatingThemeToggle.innerHTML = icon;
+    }
+}
+
+const themeSwitchHandlers = [themeToggle, floatingThemeToggle].filter(Boolean);
+
+themeSwitchHandlers.forEach((button) => {
+    button.addEventListener("click", () => {
+        const activeTheme = body.getAttribute("data-theme") === "dark" ? "light" : "dark";
+        setTheme(activeTheme);
+    });
+});
+
+setTheme(savedTheme);
 
 const pageTransitionLayer = document.createElement("div");
 pageTransitionLayer.className = "page-transition-layer";

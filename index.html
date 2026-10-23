@@ -144,8 +144,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"
         media="print" onload="this.media='all'">
     <!-- Favicons -->
-    <link rel="icon" href="images/shebe logo.png" type="image/png">
-    <link rel="apple-touch-icon" href="images/shebe logo.png">
+    <link rel="icon" href="images/shebe%20logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/shebe%20logo.png">
 
 </head>
 
@@ -155,11 +155,8 @@
         <div class="nav-container">
             <div class="logo-container">
                 <a href="index.html" aria-label="SHEBE FARMS Home">
-                    <img src="images/shebe logo.png" alt="SHEBE FARMS Logo" class="logo" width="50" height="50"
-                        loading="lazy" decoding="async"
-                        srcset="images/shebe logo.png 50w, images/shebe logo.png 100w, images/shebe logo.png 150w"
-                        sizes="50px">
-                    <!-- <span class="logo-text">SHEBE FARMS</span> -->
+                    <img src="images/shebe%20logo.png" alt="SHEBE FARMS Logo" class="logo" width="50" height="50"
+                        loading="lazy" decoding="async">
                 </a>
             </div>
 
@@ -170,6 +167,8 @@
             </button>
 
             <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -184,10 +183,58 @@
                     sizes="100vw">
             </div>
             <div class="hero-content">
-                <h1 class="hero-title">Welcome to SHEBE FARMS</h1>
-                <p class="hero-subtitle">Powered by technology. Rooted in sustainability</p>
-                <div class="hero-buttons">
-                    <a href="contact.html" class="hero-button-secondary">Get In Touch</a>
+                <div class="hero-copy">
+                    <span class="eyebrow">Commercial agriculture in Niger State</span>
+                    <h1 class="hero-title">Modern crop farming built for scale, quality, and trust.</h1>
+                    <p class="hero-subtitle">SHEBE FARMS blends precision irrigation, mechanized operations, and data-led growing systems to deliver dependable produce with a stronger commercial edge.</p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="hero-button-primary">Book a site visit</a>
+                        <a href="contact.html" class="hero-button-secondary">Get in touch</a>
+                    </div>
+
+                    <div class="hero-metrics" aria-label="Farm metrics">
+                        <div class="metric-pill">
+                            <strong>50ha</strong>
+                            <span>Working land</span>
+                        </div>
+                        <div class="metric-pill">
+                            <strong>24/7</strong>
+                            <span>Field oversight</span>
+                        </div>
+                        <div class="metric-pill">
+                            <strong>Data-led</strong>
+                            <span>Crop decisions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual" aria-label="Farm performance highlights">
+                    <div class="glass-panel glass-panel-main">
+                        <span class="panel-topline">Current focus</span>
+                        <h2>Precision farming, stronger yields, and dependable supply.</h2>
+                        <div class="mini-stat-row">
+                            <div>
+                                <strong>92%</strong>
+                                <span>Operational visibility</span>
+                            </div>
+                            <div>
+                                <strong>12+</strong>
+                                <span>Farm priorities</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel glass-panel-floating">
+                        <span class="panel-chip">Irrigation</span>
+                        <strong>Drip-ready systems</strong>
+                        <small>Water-smart production for consistent output.</small>
+                    </div>
+
+                    <div class="glass-panel glass-panel-floating glass-panel-secondary">
+                        <span class="panel-chip">Monitoring</span>
+                        <strong>24/7 field intelligence</strong>
+                        <small>Soil, crop, and operational visibility.</small>
+                    </div>
                 </div>
             </div>
             <div class="scroll-indicator" aria-hidden="true">
@@ -390,7 +437,7 @@
                 <div class="footer-col">
                     <h3>Follow Us</h3>
                     <ul class="follow-us">
-                        <li><a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"
+                        <li><a href="https://www.facebook.com/shebefarms" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"
                                     aria-hidden="true"></i> </a></li>
                         <li><a href="https://wa.me/2349070784389?text=Hello%20SHEBE%20FARMS%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20products." target="_blank" rel="noopener"
                                 aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
@@ -424,27 +471,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="scripts/hero-slideshow.js" defer></script>
     <script src="scripts/shared.js" defer></script>
     <script src="scripts/index-modern.js" defer></script>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
-
-
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script",);
-    </script>
 </html>
