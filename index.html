@@ -144,8 +144,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"
         media="print" onload="this.media='all'">
     <!-- Favicons -->
-    <link rel="icon" href="images/shebe logo.png" type="image/png">
-    <link rel="apple-touch-icon" href="images/shebe logo.png">
+    <link rel="icon" href="images/shebe%20logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/shebe%20logo.png">
+
+        <!-- Gallery Styles -->
+        <link rel="stylesheet" href="styles/gallery.css">
 
 </head>
 
@@ -154,13 +157,10 @@
     <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="logo-container">
-                <a href="index.html" aria-label="SHEBE FARMS Home">
-                    <img src="images/shebe logo.png" alt="SHEBE FARMS Logo" class="logo" width="50" height="50"
-                        loading="lazy" decoding="async"
-                        srcset="images/shebe logo.png 50w, images/shebe logo.png 100w, images/shebe logo.png 150w"
-                        sizes="50px">
-                    <!-- <span class="logo-text">SHEBE FARMS</span> -->
-                </a>
+                    <a href="index.html" aria-label="SHEBE FARMS Home">
+                        <img src="images/shebe%20logo.png" alt="SHEBE FARMS Logo" class="logo" width="38" height="38"
+                            style="max-width:38px;max-height:38px;" loading="lazy" decoding="async">
+                    </a>
             </div>
 
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
@@ -170,9 +170,8 @@
             </button>
 
             <ul class="nav-menu" id="navMenu">
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html">Gallery</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
@@ -187,17 +186,85 @@
                     sizes="100vw">
             </div>
             <div class="hero-content">
-                <h1 class="hero-title">Welcome to SHEBE FARMS</h1>
-                <p class="hero-subtitle">Powered by technology. Rooted in sustainability</p>
-                <div class="hero-buttons">
-                    <a href="services.html" class="hero-button-primary">Our Services</a>
-                    <a href="contact.html" class="hero-button-secondary">Get In Touch</a>
+                <div class="hero-copy">
+                    <span class="eyebrow">Proudly growing in Niger State</span>
+                    <h1 class="hero-title">Good farming, grown with care.</h1>
+                    <p class="hero-subtitle">At Shebe Farms, we combine smart irrigation, modern equipment, and local knowledge to grow fresh, quality produce. We care for every crop from the nursery to harvest.</p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="hero-button-primary">Visit our farm</a>
+                        <a href="contact.html" class="hero-button-secondary">Talk with us</a>
+                    </div>
+
+                    <div class="hero-metrics" aria-label="Farm metrics">
+                        <div class="metric-pill">
+                            <strong>50ha</strong>
+                            <span>Growing across 50 hectares</span>
+                        </div>
+                        <div class="metric-pill">
+                            <strong>24/7</strong>
+                            <span>Careful field monitoring</span>
+                        </div>
+                        <div class="metric-pill">
+                            <strong>Data-led</strong>
+                            <span>Better-informed decisions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual" aria-label="Farm performance highlights">
+                    <div class="glass-panel glass-panel-main">
+                        <span class="panel-topline">Current focus</span>
+                        <h2>Careful growing and a dependable supply.</h2>
+                        <div class="mini-stat-row">
+                            <div>
+                                <strong>92%</strong>
+                                <span>Clear view of farm operations</span>
+                            </div>
+                            <div>
+                                <strong>12+</strong>
+                                <span>Plenty priorities, no slack</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel glass-panel-floating">
+                        <span class="panel-chip">Irrigation</span>
+                        <strong>Reliable drip irrigation</strong>
+                        <small>Smart watering helps reduce waste and support healthy crops.</small>
+                    </div>
+
+                    <div class="glass-panel glass-panel-floating glass-panel-secondary">
+                        <span class="panel-chip">Monitoring</span>
+                        <strong>Field monitoring, day and night</strong>
+                        <small>We keep a close eye on soil, crops, and daily operations.</small>
+                    </div>
                 </div>
             </div>
             <div class="scroll-indicator" aria-hidden="true">
                 <span></span>
             </div>
         </header>
+
+        <!-- Farm Gallery Section -->
+        <section class="gallery-section" aria-labelledby="gallery-heading">
+            <div class="gallery-container">
+                <h2 id="gallery-heading" class="gallery-title">A Closer Look at Farm Life</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="images/greenhouse/greenhouse pic5.jpeg" alt="Seedling Trays" class="gallery-img" loading="lazy">
+                        <div class="gallery-caption">Young tomato plants resting in nursery trays before they go to the field. A strong start makes all the difference.</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/greenhouse/greenhouse pic7.jpeg" alt="Young Staked Tomatoes" class="gallery-img" loading="lazy">
+                        <div class="gallery-caption">Young tomato plants growing under mulch and support nets. We care for every plant as it grows.</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="images/greenhouse/greenhouse pic6.jpeg" alt="Pepper Greenhouse/Netting" class="gallery-img" loading="lazy">
+                        <div class="gallery-caption">Pepper plants doing heavy lifting inside the structure. Fresh, clean, and organic straight from Bisanti soil.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Trust Badges -->
         <section class="trust-section" aria-labelledby="trust-heading">
@@ -272,7 +339,7 @@
                                     class="tomato-image" loading="lazy">
                             </div>
                         </div>
-                        <a href="about.html" class="about-button">Learn More About Us</a>
+                        <a href="contact.html" class="about-button">Contact Us</a>
                     </div>
 
                 </div>
@@ -361,58 +428,52 @@
         </section>
 
         <!-- CTA Section -->
-        <section class="cta-section" aria-labelledby="cta-heading">
+        <section class="about-preview" aria-labelledby="about-heading">
             <div class="container">
-                <div class="cta-content">
-                    <h2 id="cta-heading">Ready to Work With Us?</h2>
-                    <p>Join us in shaping the future of agriculture in Niger State and beyond</p>
-                    <a href="contact.html" class="contact-btn">Contact Us Today</a>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <span class="section-label">Our Story</span>
+                        <h2 id="about-heading">Growing Better Food with Care and Innovation</h2>
+                        <p>Shebe Farms is located between Minna and Bida in Niger State. We care for 50 hectares of farmland and use smart systems alongside local knowledge to grow fresh, quality food.</p>
+                        <div class="about-features">
+                            <div>
+                                <ul class="feature-list">
+                                    <li>
+                                        <h3><i class="fa-solid fa-droplet"></i>
+                                            Smart Drip Irrigation</h3>
+                                        <p>Every drop counts. Our drip systems deliver water to crop roots and help reduce waste.</p>
+                                    </li>
+                                    <li>
+                                        <h3><i class="fa-solid fa-chart-column"></i>
+                                            Careful Crop Monitoring</h3>
+                                        <p>We monitor soil and growing conditions to help keep our crops healthy.</p>
+                                    </li>
+                                    <li>
+                                        <h3><i class="fa-solid fa-tractor"></i>
+                                            GPS-Guided Equipment</h3>
+                                        <p>Modern equipment helps us work efficiently and make the most of our time.</p>
+                                    </li>
+                                    <li>
+                                        <h3><i class="fa-solid fa-chart-line"></i>
+                                            Data-Informed Decisions</h3>
+                                        <p>We use data to guide each stage, from planting through harvest.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="about-image">
+                                <img src="images/tomatooo.jpeg" alt="SHEBE FARMS modern cultivation"
+                                    class="tomato-image" loading="lazy">
+                            </div>
+                        </div>
+                        <a href="contact.html" class="about-button">Talk with us</a>
+                    </div>
                 </div>
             </div>
         </section>
-    </main>
-    <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <img src="images/logo.png" alt="SHEBE FARMS" class="footer-logo" width="120" height="100"
-                        loading="lazy" decoding="async"
-                        srcset="images/logo.png 80w, images/logo.png 120w, images/logo.png 160w"
-                        sizes="(max-width: 768px) 60px, 120px">
-                    <p>Growing better Crops using smarter systems. Nigeria's leading model of modern, data-driven
-                        agriculture.</p>
-                </div>
-
-                <nav class="footer-col" aria-label="Footer navigation">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="blog.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-
-                <div class="footer-col">
-                    <h3>Follow Us</h3>
-                    <ul class="follow-us">
-                        <li><a href="#" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"
-                                    aria-hidden="true"></i> </a></li>
-                        <li><a href="https://www.instagram.com/shebefarms" target="_blank" rel="noopener"
-                                aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a href="https://youtube.com/@shebefarms" target="_blank" rel="noopener"
-                                aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i> </a></li>
-                        <li><a href="https://www.tiktok.com/@shebefarms" target="_blank" rel="noopener"
-                                aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Contact Info</h3>
                     <address class="contact-info">
                         <ul>
                             <li><i class="fas fa-phone"></i> <a href="tel:+2349070784389">+2349070784389</a></li>
+                            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/2349070784389?text=Hello%20SHEBE%20FARMS%2C%20I%20would%20like%20to%20contact%20you." target="_blank" rel="noopener">Chat on WhatsApp</a></li>
                             <li><i class="fas fa-envelope"></i> <a
                                     href="mailto:contact@shebefarms.com">contact@shebefarms.com</a></li>
                             <li><i class="fas fa-clock"></i> Mon - Sat: 7AM - 6PM</li>
@@ -422,33 +483,13 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 SHEBE FARMS. All rights reserved.</p>
+                <p>&copy; 2026 SHEBE FARMS. Growing fresh produce with care. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="scripts/hero-slideshow.js" defer></script>
     <script src="scripts/shared.js" defer></script>
     <script src="scripts/index-modern.js" defer></script>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-    </script>
-
-
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function (c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
-            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script",);
-    </script>
 </html>
